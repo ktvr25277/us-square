@@ -1,41 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<meta charset="utf-8">
-<title>Wikimedia Error</title>
-<style>
-* { margin: 0; padding: 0; }
-body { background: #fff; font: 15px/1.6 sans-serif; color: #333; }
-.content { margin: 7% auto 0; padding: 2em 1em 1em; max-width: 640px; display: flex; flex-direction: row; flex-wrap: wrap; }
-.footer { clear: both; margin-top: 14%; border-top: 1px solid #e5e5e5; background: #f9f9f9; padding: 2em 0; font-size: 0.8em; text-align: center; }
-img { margin: 0 2em 2em 0; }
-a img { border: 0; }
-h1 { margin-top: 1em; font-size: 1.2em; }
-.content-text { flex: 1; }
-p { margin: 0.7em 0 1em 0; }
-a { color: #0645ad; text-decoration: none; }
-a:hover { text-decoration: underline; }
-code { font-family: sans-serif; }
-summary { font-weight: bold; cursor: pointer; }
-details[open] { background: #970302; color: #dfdedd; }
-.text-muted { color: #777; }
-@media (prefers-color-scheme: dark) {
-  a { color: #9e9eff; }
-  body { background: transparent; color: #ddd; }
-  .footer { border-top: 1px solid #444; background: #060606; }
-  #logo { filter: invert(1) hue-rotate(180deg); }
-  .text-muted { color: #888; }
-}
-</style>
-<meta name="color-scheme" content="light dark">
-<div class="content" role="main">
-<a href="https://www.wikimedia.org"><img id="logo" src="https://www.wikimedia.org/static/images/wmf-logo.png" srcset="https://www.wikimedia.org/static/images/wmf-logo-2x.png 2x" alt="Wikimedia" width="135" height="101">
-</a>
-<div class="content-text">
-<h1>Error</h1>
-
-<p>Not Found</p>
-</div>
-</div>
-<div class="footer"><p>If you report this error to the Wikimedia System Administrators, please include the details below.</p><p class="text-muted"><code>Request served via cp5030 cp5030, Varnish XID 705118885<br>Upstream caches: cp5030 int<br>Error: 404, Not Found at Fri, 22 May 2026 21:22:37 GMT<br><details><summary>Sensitive client information</summary>IP address: 2400:2411:4203:f800:5cb8:cc3e:d2e1:437d</details></code></p>
-</div>
-</html>
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="420" style="background:#1a2a4a">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#1e3a6e"/>
+      <stop offset="100%" stop-color="#0d1b2a"/>
+    </radialGradient>
+  </defs>
+  <rect width="700" height="420" fill="url(#bg)"/>
+  <text x="350" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#c9a84c" font-family="Georgia,serif">アメリカの主な国立公園・史跡</text>
+  <text x="350" y="54" text-anchor="middle" font-size="13" fill="#9aa5b4" font-family="sans-serif">National Parks of the United States</text>
+  
+      <circle cx="180" cy="133" r="6" fill="#c9a84c" opacity="0.85"/>
+      <text x="180" y="123" text-anchor="middle" font-size="10" fill="#c9a84c" font-family="sans-serif" opacity="0.9">Yellowstone</text>
+    
+      <circle cx="165" cy="226" r="6" fill="#c9a84c" opacity="0.85"/>
+      <text x="165" y="216" text-anchor="middle" font-size="10" fill="#c9a84c" font-family="sans-serif" opacity="0.9">Grand Canyon</text>
+    
+      <circle cx="92" cy="207" r="6" fill="#c9a84c" opacity="0.85"/>
+      <text x="92" y="197" text-anchor="middle" font-size="10" fill="#c9a84c" font-family="sans-serif" opacity="0.9">Yosemite</text>
+    
+      <circle cx="156" cy="212" r="6" fill="#c9a84c" opacity="0.85"/>
+      <text x="156" y="202" text-anchor="middle" font-size="10" fill="#c9a84c" font-family="sans-serif" opacity="0.9">Zion</text>
+    
+      <circle cx="441" cy="231" r="6" fill="#c9a84c" opacity="0.85"/>
+      <text x="441" y="221" text-anchor="middle" font-size="10" fill="#c9a84c" font-family="sans-serif" opacity="0.9">Great Smoky Mts</text>
+    
+      <circle cx="227" cy="179" r="6" fill="#6b9ac4" opacity="0.85"/>
+      <text x="227" y="169" text-anchor="middle" font-size="10" fill="#6b9ac4" font-family="sans-serif" opacity="0.9">Rocky Mountain</text>
+    
+      <circle cx="589" cy="134" r="6" fill="#6b9ac4" opacity="0.85"/>
+      <text x="589" y="124" text-anchor="middle" font-size="10" fill="#6b9ac4" font-family="sans-serif" opacity="0.9">Acadia</text>
+    
+      <circle cx="54" cy="95" r="6" fill="#6b9ac4" opacity="0.85"/>
+      <text x="54" y="85" text-anchor="middle" font-size="10" fill="#6b9ac4" font-family="sans-serif" opacity="0.9">Olympic</text>
+    
+      <circle cx="148" cy="85" r="6" fill="#6b9ac4" opacity="0.85"/>
+      <text x="148" y="75" text-anchor="middle" font-size="10" fill="#6b9ac4" font-family="sans-serif" opacity="0.9">Glacier</text>
+    
+      <circle cx="128" cy="250" r="6" fill="#6b9ac4" opacity="0.85"/>
+      <text x="128" y="240" text-anchor="middle" font-size="10" fill="#6b9ac4" font-family="sans-serif" opacity="0.9">Joshua Tree</text>
+    
+      <circle cx="466" cy="347" r="6" fill="#7ec8a0" opacity="0.85"/>
+      <text x="466" y="337" text-anchor="middle" font-size="10" fill="#7ec8a0" font-family="sans-serif" opacity="0.9">Everglades</text>
+    
+      <circle cx="490" cy="199" r="6" fill="#7ec8a0" opacity="0.85"/>
+      <text x="490" y="189" text-anchor="middle" font-size="10" fill="#7ec8a0" font-family="sans-serif" opacity="0.9">Shenandoah</text>
+    
+      <circle cx="164" cy="209" r="6" fill="#7ec8a0" opacity="0.85"/>
+      <text x="164" y="199" text-anchor="middle" font-size="10" fill="#7ec8a0" font-family="sans-serif" opacity="0.9">Bryce Canyon</text>
+    
+      <circle cx="116" cy="221" r="6" fill="#7ec8a0" opacity="0.85"/>
+      <text x="116" y="211" text-anchor="middle" font-size="10" fill="#7ec8a0" font-family="sans-serif" opacity="0.9">Death Valley</text>
+    
+      <circle cx="68" cy="150" r="6" fill="#7ec8a0" opacity="0.85"/>
+      <text x="68" y="140" text-anchor="middle" font-size="10" fill="#7ec8a0" font-family="sans-serif" opacity="0.9">Crater Lake</text>
+    
+  <text x="350" y="408" text-anchor="middle" font-size="11" fill="#666" font-family="sans-serif">出典：National Park Service (NPS)</text>
+</svg>

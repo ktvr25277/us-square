@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="800" style="background:white">
+  <text x="340" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a1a2e" font-family="sans-serif">アメリカ在住の日本系人口（州別・上位20州）</text>
+  <text x="340" y="52" text-anchor="middle" font-size="13" fill="#666" font-family="sans-serif">出典：2020年米国国勢調査（Japanese alone or in combination）</text>
+  
+    <rect x="50" y="60" width="480" height="32" fill="rgb(75,155,225)" rx="3"/>
+    <text x="40" y="81" text-anchor="end" font-size="14" fill="#333" font-family="sans-serif">HI</text>
+    <text x="535" y="81" font-size="13" fill="#444" font-family="sans-serif">312,292</text>
+  
+    <rect x="50" y="96" width="419" height="32" fill="rgb(87,162,227)" rx="3"/>
+    <text x="40" y="117" text-anchor="end" font-size="14" fill="#333" font-family="sans-serif">CA</text>
+    <text x="474" y="117" font-size="13" fill="#444" font-family="sans-serif">272,528</text>
+  
+    <rect x="50" y="132" width="112" height="32" fill="rgb(168,207,241)" rx="3"/>
+    <text x="40" y="153" text-anchor="end" font-size="14" fill="#333" font-family="sans-serif">WA</text>
+    <text x="167" y="153" font-size="13" fill="#444" font-family="sans-serif">72,796</text>
+  
+    <rect x="50" y="168" width="74" height="32" fill="rgb(185,216,243)" rx="3"/>
+    <text x="40" y="189" text-anchor="end" font-size="14" fill="#333" font-family="sans-serif">NY</text>
+    <text x="129" y="189" font-size="13" fill="#444" font-family="sans-serif">47,830</text>
+  
+    <rect x="50" y="204" width="71" height="32" fill="rgb(186,217,243)" rx="3"/>
+    <text x="40" y="225" text-anchor="end" font-size="14" fill="#333" font-family="sans-serif">TX</text>
+    <text x="126" y="225" font-size="13" fill="#444" font-family="sans-serif">46,218</text>
+  
+    <rect x="50" y="240" width="54" height="32" fill="rgb(195,222,245)" rx="3"/>
+    <text x="40" y="261" text-anchor="end" font-size="14" fill="#333" font-family="sans-serif">FL</text>
+    <text x="109" y="261" font-size="13" fill="#444" font-family="sans-serif">34,920</text>
+  
+    <rect x="50" y="276" width="47" height="32" fill="rgb(199,224,246)" rx="3"/>
+    <text x="40" y="297" text-anchor="end" font-size="14" fill="#333" font-family="sans-serif">NJ</text>
+    <text x="102" y="297" font-size="13" fill="#444" font-family="sans-serif">30,476</text>
+  
+    <rect x="50" y="312" width="37" height="32" fill="rgb(205,227,247)" rx="3"/>
+    <text x="40" y="333" text-anchor="end" font-size="14" fill="#333" font-family="sans-serif">IL</text>
+    <text x="92" y="333" font-size="13" fill="#444" font-family="sans-serif">24,228</text>
+  
+    <rect x="50" y="348" width="35" height="32" fill="rgb(206,228,247)" rx="3"/>
+    <text x="40" y="369" text-anchor="end" font-size="14" fill="#333" font-family="sans-serif">VA</text>
+    <text x="90" y="369" font-size="13" fill="#444" font-family="sans-serif">23,044</text>
+  
+    <rect x="50" y="384" width="32" height="32" fill="rgb(208,229,247)" rx="3"/>
+    <text x="40" y="405" text-anchor="end" font-size="14" fill="#333" font-family="sans-serif">CO</text>
+    <text x="87" y="405" font-size="13" fill="#444" font-family="sans-serif">20,876</text>
+  
+    <rect x="50" y="420" width="31" height="32" fill="rgb(209,230,247)" rx="3"/>
+    <text x="40" y="441" text-anchor="end" font-size="14" fill="#333" font-family="sans-serif">OR</text>
+    <text x="86" y="441" font-size="13" fill="#444" font-family="sans-serif">20,280</text>
+  
+    <rect x="50" y="456" width="28" height="32" fill="rgb(212,231,248)" rx="3"/>
+    <text x="40" y="477" text-anchor="end" font-size="14" fill="#333" font-family="sans-serif">GA</text>
+    <text x="83" y="477" font-size="13" fill="#444" font-family="sans-serif">18,148</text>
+  
+    <rect x="50" y="492" width="26" height="32" fill="rgb(213,232,248)" rx="3"/>
+    <text x="40" y="513" text-anchor="end" font-size="14" fill="#333" font-family="sans-serif">AZ</text>
+    <text x="81" y="513" font-size="13" fill="#444" font-family="sans-serif">16,796</text>
+  
+    <rect x="50" y="528" width="25" height="32" fill="rgb(214,232,248)" rx="3"/>
+    <text x="40" y="549" text-anchor="end" font-size="14" fill="#333" font-family="sans-serif">NC</text>
+    <text x="80" y="549" font-size="13" fill="#444" font-family="sans-serif">15,980</text>
+  
+    <rect x="50" y="564" width="23" height="32" fill="rgb(216,233,248)" rx="3"/>
+    <text x="40" y="585" text-anchor="end" font-size="14" fill="#333" font-family="sans-serif">PA</text>
+    <text x="78" y="585" font-size="13" fill="#444" font-family="sans-serif">14,744</text>
+  
+    <rect x="50" y="600" width="22" height="32" fill="rgb(217,234,249)" rx="3"/>
+    <text x="40" y="621" text-anchor="end" font-size="14" fill="#333" font-family="sans-serif">MD</text>
+    <text x="77" y="621" font-size="13" fill="#444" font-family="sans-serif">14,024</text>
+  
+    <rect x="50" y="636" width="21" height="32" fill="rgb(217,234,249)" rx="3"/>
+    <text x="40" y="657" text-anchor="end" font-size="14" fill="#333" font-family="sans-serif">MA</text>
+    <text x="76" y="657" font-size="13" fill="#444" font-family="sans-serif">13,792</text>
+  
+    <rect x="50" y="672" width="20" height="32" fill="rgb(219,235,249)" rx="3"/>
+    <text x="40" y="693" text-anchor="end" font-size="14" fill="#333" font-family="sans-serif">OH</text>
+    <text x="75" y="693" font-size="13" fill="#444" font-family="sans-serif">12,820</text>
+  
+    <rect x="50" y="708" width="16" height="32" fill="rgb(222,237,249)" rx="3"/>
+    <text x="40" y="729" text-anchor="end" font-size="14" fill="#333" font-family="sans-serif">MN</text>
+    <text x="71" y="729" font-size="13" fill="#444" font-family="sans-serif">10,644</text>
+  
+    <rect x="50" y="744" width="16" height="32" fill="rgb(223,237,250)" rx="3"/>
+    <text x="40" y="765" text-anchor="end" font-size="14" fill="#333" font-family="sans-serif">NV</text>
+    <text x="71" y="765" font-size="13" fill="#444" font-family="sans-serif">10,164</text>
+  
+</svg>

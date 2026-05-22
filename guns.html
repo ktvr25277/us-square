@@ -2,47 +2,288 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="アメリカは銃社会。州によって実際どれ位犠牲者数がいるのかをマップにしたものです。">
-<meta property="og:title" content="アメリカで銃の犠牲になった（死亡）数マップ（10万人あたり）">
-<meta property="og:description" content="アメリカは銃社会。州によって実際どれ位犠牲者数がいるのかをマップにしたものです。">
-<meta property="og:site_name" content="USスクエア">
-<title>アメリカで銃の犠牲になった（死亡）数マップ（10万人あたり） - USスクエア</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="州別・10万人あたりの銃死亡者数マップ。アメリカ渡航前に地域の安全性を確認。">
+<meta property="og:title" content="銃の犠牲者マップ">
+<meta property="og:site_name" content="US SQUARE">
+<title>銃の犠牲者マップ | US SQUARE</title>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4434695896885099" crossorigin="anonymous"></script>
 <style>
-body{font-family:'Hiragino Kaku Gothic Pro',Meiryo,sans-serif;margin:0;padding:0;background:#fff;color:#333}
-header{background:#2c5f8a;padding:12px 24px}
-header a{color:#fff;text-decoration:none;font-size:1.1em;font-weight:bold}
-nav ul{list-style:none;padding:0;margin:0;background:#f5f5f5;display:flex;flex-wrap:wrap;border-bottom:1px solid #ddd}
-nav ul li a{display:block;padding:10px 16px;text-decoration:none;color:#444;font-size:14px}
-nav ul li a:hover{background:#e0e0e0}
-main{max-width:900px;margin:0 auto;padding:24px 20px}
-h1{font-size:1.3em;margin-bottom:1em;border-left:4px solid #2c5f8a;padding-left:10px}
-h2{font-size:1.1em;margin-top:2em;margin-bottom:0.5em;color:#2c5f8a}
-img{max-width:100%;height:auto;display:block;margin:1em 0}
-.intro{margin:1em 0;line-height:1.9;color:#555;font-size:15px}
-.news{list-style:none;padding:0;line-height:2.4;font-size:15px}
-.credit{font-size:13px;color:#888;margin-top:0.5em}
-hr{border:none;border-top:1px solid #eee;margin:2em 0}
-footer{text-align:center;padding:20px;font-size:12px;color:#999;border-top:1px solid #eee;margin-top:40px}
-@media(max-width:600px){nav ul{flex-direction:column}main{padding:16px}}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+JP:wght@300;400;500&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --navy:#0d1b2a;
+  --navy2:#162032;
+  --red:#c0392b;
+  --gold:#c9a84c;
+  --gold-light:#e8c97a;
+  --text:#e8e8e8;
+  --text-muted:#9aa5b4;
+  --border:rgba(201,168,76,0.2);
+}
+
+body{
+  font-family:'Noto Sans JP',sans-serif;
+  background:var(--navy);
+  color:var(--text);
+  min-height:100vh;
+}
+
+/* ── Header ── */
+header{
+  background:var(--navy2);
+  border-bottom:1px solid var(--border);
+  padding:0 5%;
+  position:sticky;top:0;z-index:100;
+}
+.header-inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  height:70px;
+}
+.logo-link{text-decoration:none}
+
+/* ── Nav ── */
+nav{display:flex;gap:0}
+nav a{
+  color:var(--text-muted);
+  text-decoration:none;
+  font-size:13px;
+  letter-spacing:.05em;
+  padding:0 16px;
+  height:70px;
+  display:flex;align-items:center;
+  border-bottom:2px solid transparent;
+  transition:color .2s,border-color .2s;
+}
+nav a:hover,nav a.active{
+  color:var(--gold);
+  border-bottom-color:var(--gold);
+}
+
+/* ── Hero ── */
+.hero{
+  background:linear-gradient(135deg,#0d1b2a 0%,#1a2a3f 50%,#0d1b2a 100%);
+  border-bottom:1px solid var(--border);
+  padding:60px 5% 50px;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';
+  position:absolute;inset:0;
+  background:repeating-linear-gradient(
+    0deg,transparent,transparent 40px,
+    rgba(201,168,76,.03) 40px,rgba(201,168,76,.03) 41px
+  ),repeating-linear-gradient(
+    90deg,transparent,transparent 40px,
+    rgba(201,168,76,.03) 40px,rgba(201,168,76,.03) 41px
+  );
+}
+.hero-inner{max-width:1100px;margin:0 auto;position:relative}
+.hero-label{
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:16px;
+  display:flex;align-items:center;gap:10px;
+}
+.hero-label::before{content:'';width:24px;height:1px;background:var(--gold)}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(24px,4vw,42px);
+  font-weight:700;
+  line-height:1.25;
+  color:#fff;
+  margin-bottom:20px;
+  max-width:780px;
+}
+.hero p{
+  color:var(--text-muted);
+  font-size:15px;line-height:1.9;
+  max-width:680px;
+  font-weight:300;
+}
+.hero-accent{
+  position:absolute;right:0;top:-20px;
+  width:300px;height:300px;
+  background:radial-gradient(circle,rgba(192,57,43,.12) 0%,transparent 70%);
+  pointer-events:none;
+}
+
+/* ── Main ── */
+main{max-width:1100px;margin:0 auto;padding:50px 5%}
+
+/* ── Section heading ── */
+.section-heading{
+  display:flex;align-items:center;gap:14px;
+  margin-bottom:28px;
+}
+.section-heading h2{
+  font-family:'Playfair Display',serif;
+  font-size:22px;color:#fff;font-weight:700;
+}
+.section-heading::before{
+  content:'';width:4px;height:28px;
+  background:linear-gradient(180deg,var(--gold),var(--red));
+  border-radius:2px;flex-shrink:0;
+}
+
+/* ── Image card ── */
+.img-card{
+  background:var(--navy2);
+  border:1px solid var(--border);
+  border-radius:4px;
+  overflow:hidden;
+  margin-bottom:40px;
+}
+.img-card img{
+  width:100%;height:auto;display:block;
+}
+.img-card-caption{
+  padding:14px 20px;
+  font-size:12px;color:var(--text-muted);
+  letter-spacing:.05em;
+  border-top:1px solid var(--border);
+}
+
+/* ── News list ── */
+.news-list{list-style:none}
+.news-list li{
+  padding:18px 0;
+  border-bottom:1px solid var(--border);
+  display:flex;gap:20px;align-items:baseline;
+  font-size:15px;
+}
+.news-list li:last-child{border-bottom:none}
+.news-date{
+  color:var(--gold);font-size:12px;
+  letter-spacing:.08em;white-space:nowrap;
+  font-family:'Playfair Display',serif;
+}
+
+/* ── Content grid ── */
+.page-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:20px;margin-top:32px;
+}
+.page-card{
+  background:var(--navy2);
+  border:1px solid var(--border);
+  border-radius:4px;
+  padding:28px 24px;
+  text-decoration:none;
+  display:block;
+  transition:border-color .2s,transform .2s;
+  position:relative;overflow:hidden;
+}
+.page-card::after{
+  content:'';
+  position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--gold),var(--red));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .25s;
+}
+.page-card:hover{border-color:rgba(201,168,76,.5);transform:translateY(-2px)}
+.page-card:hover::after{transform:scaleX(1)}
+.page-card-title{
+  font-family:'Playfair Display',serif;
+  font-size:17px;color:#fff;
+  margin-bottom:8px;font-weight:700;
+}
+.page-card-desc{
+  font-size:13px;color:var(--text-muted);
+  line-height:1.7;font-weight:300;
+}
+.page-card-arrow{
+  margin-top:18px;font-size:12px;
+  color:var(--gold);letter-spacing:.1em;
+}
+
+/* ── Divider ── */
+.divider{
+  border:none;
+  border-top:1px solid var(--border);
+  margin:40px 0;
+}
+
+/* ── Intro text ── */
+.intro-text{
+  color:var(--text-muted);
+  font-size:15px;line-height:1.95;
+  font-weight:300;
+  max-width:800px;
+  margin-bottom:36px;
+}
+.intro-text b,.intro-text strong{color:var(--text);font-weight:500}
+
+/* ── Credit ── */
+.credit{
+  font-size:12px;color:var(--text-muted);
+  margin-top:12px;letter-spacing:.05em;
+}
+.credit a{color:var(--gold);text-decoration:none}
+
+/* ── Footer ── */
+footer{
+  border-top:1px solid var(--border);
+  text-align:center;
+  padding:32px 5%;
+  font-size:12px;
+  color:var(--text-muted);
+  letter-spacing:.08em;
+  margin-top:60px;
+}
+footer span{color:var(--gold)}
+
+/* ── Responsive ── */
+@media(max-width:700px){
+  .header-inner{flex-direction:column;height:auto;padding:14px 0;gap:10px}
+  nav{flex-wrap:wrap;justify-content:center}
+  nav a{height:36px;font-size:12px;padding:0 10px}
+  .hero{padding:36px 5% 32px}
+}
 </style>
 </head>
 <body>
-<header><a href="index.html">USスクエア</a></header>
-<nav><ul><li><a href="index.html">トップ</a></li>
-<li><a href="guns.html">銃の犠牲者</a></li>
-<li><a href="tax.html">州別の消費税</a></li>
-<li><a href="alcohol.html">酒税とたばこ税</a></li>
-<li><a href="japanese.html">アメリカ在住の日本人数</a></li>
-<li><a href="landmarks.html">史跡と産業</a></li></ul></nav>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo-link"><svg viewBox="0 0 220 48" xmlns="http://www.w3.org/2000/svg" style="height:44px;width:auto">
+  <text x="4" y="34" font-family="Georgia,serif" font-size="32" font-weight="bold" fill="#fff" letter-spacing="-1">US</text>
+  <text x="52" y="34" font-family="Georgia,serif" font-size="22" font-weight="normal" fill="#c9a84c" letter-spacing="6">SQUARE</text>
+  <line x1="4" y1="40" x2="216" y2="40" stroke="#c9a84c" stroke-width="1.5" opacity="0.5"/>
+</svg></a>
+    <nav><a href="index.html">トップ</a><a href="guns.html" class="active">銃の犠牲者</a><a href="tax.html">州別の消費税</a><a href="alcohol.html">酒税とたばこ税</a><a href="japanese.html">アメリカ在住の日本人数</a><a href="landmarks.html">史跡と産業</a></nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-accent"></div>
+  <div class="hero-inner">
+    <div class="hero-label">US SQUARE</div>
+    <h1>銃の犠牲者マップ</h1>
+    <p>州別・10万人あたりの銃死亡者数。これから訪れる・住む地域の危険性を確認しましょう。</p>
+  </div>
+</div>
+
 <main>
-<h1>アメリカで銃の犠牲になった（死亡）数マップ（10万人あたり）</h1>
-<div class="intro">アメリカは銃社会。州によって実際どれ位犠牲者数がいるのかをマップにしたものです。<br>
-これから訪れる／住む地域の危険性をよく確認しておきましょう。</div>
-<img src="https://us.bloomsfun.com/uploads/1/4/7/8/14781310/editor/m9939088-2.png?1491693980" alt="銃犠牲者マップ（10万人あたり）">
-<p class="credit">参照元：Centers for Disease Control and Prevention</p>
+
+<p class="intro-text">
+アメリカは銃社会。州によって実際どれ位の犠牲者数がいるのかをマップにしたものです。<br>
+これから訪れる・住む地域の危険性をよく確認しておきましょう。
+</p>
+<div class="img-card">
+  <img src="https://us.bloomsfun.com/uploads/1/4/7/8/14781310/editor/m9939088-2.png?1491693980" alt="銃犠牲者マップ（10万人あたり）">
+  <div class="img-card-caption">参照元：Centers for Disease Control and Prevention（CDC）</div>
+</div>
+
 </main>
-<footer>&copy; USスクエア All rights reserved.</footer>
+
+<footer>
+  &copy; <span>US SQUARE</span> — アメリカ情報まとめサイト
+</footer>
+
 </body>
 </html>

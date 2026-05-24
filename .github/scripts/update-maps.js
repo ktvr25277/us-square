@@ -1,6 +1,7 @@
 /**
- * update-maps.js v2
+ * update-maps.js v3
  * Tax FoundationのLOST{Mon}{YY}.pngパターンで最新版を正確に取得
+ * index.html / tax.html / income-tax.html の年号も自動更新
  */
 const https = require('https');
 const fs = require('fs');
@@ -55,24 +56,40 @@ async function findImgFromPage(pageUrl) {
   return { url: ms[0].url, year: ms[0].year };
 }
 
+// 年号を更新するHTMLファイル（画像ごとに対応するファイル一覧）
 const ITEMS = [
-  { name: '消費税', findUrl: findLatestLostUrl, img: 'images/tax.png', html: 'tax.html' },
-  { name: '所得税', page: 'https://taxfoundation.org/data/all/state/state-income-tax-rates/', img: 'images/income-tax.png', html: 'income-tax.html' },
+  {
+    name: '消費税',
+    findUrl: findLatestLostUrl,
+    img: 'images/tax.png',
+    htmlFiles: ['tax.html', 'index.html'],   // ← index.htmlも更新
+  },
+  {
+    name: '所得税',
+    page: 'https://taxfoundation.org/data/all/state/state-income-tax-rates/',
+    img: 'images/income-tax.png',
+    htmlFiles: ['income-tax.html', 'index.html'],
+  },
 ];
 
 async function run(item) {
   console.log('=== ' + item.name + ' ===');
   const r = item.findUrl ? await item.findUrl() : await findImgFromPage(item.page);
   if (!r) { console.log('URLなし'); return false; }
+
   const newBuf = await fetchBuf(r.url);
   const oldBuf = fs.existsSync(item.img) ? fs.readFileSync(item.img) : null;
-  if (oldBuf && newBuf.equals(oldBuf)) { console.log('unchanged'); return false; }
+  if (oldBuf && newBuf.equals(oldBuf)) { console.log('unchanged: ' + item.img); return false; }
+
   fs.writeFileSync(item.img, newBuf);
-  console.log('updated: ' + item.img + ' ← ' + r.url);
-  if (r.year && fs.existsSync(item.html)) {
-    const h = fs.readFileSync(item.html, 'utf-8');
+  console.log('updated: ' + item.img + ' <- ' + r.url);
+
+  // 対象HTMLファイルの年号を更新
+  for (const hf of (item.htmlFiles || [])) {
+    if (!fs.existsSync(hf)) continue;
+    const h = fs.readFileSync(hf, 'utf-8');
     const u = h.replace(/\d{4}年(\d+月)?版/g, r.year + '年1月版');
-    if (u !== h) { fs.writeFileSync(item.html, u); console.log('html year → ' + r.year); }
+    if (u !== h) { fs.writeFileSync(hf, u); console.log('html year -> ' + r.year + ' in ' + hf); }
   }
   return true;
 }
@@ -82,5 +99,5 @@ async function run(item) {
   for (const item of ITEMS) {
     try { if (await run(item)) any = true; } catch(e) { console.error(item.name + ':' + e.message); }
   }
-  console.log(any ? '更新あり→コミット' : 'すべて最新');
+  console.log(any ? '更新あり->コミット' : 'すべて最新');
 })();

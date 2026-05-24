@@ -1,0 +1,58 @@
+# US SQUARE
+
+US SQUAREはアメリカの一次情報（税金・治安・生活費・家賃など）を日本語で提供するサイトです。
+Tax Foundation・FBI・CDC・U.S. Department of Laborなどアメリカ公的機関の最新データをもとにしています。
+
+URL: https://us.bloomsfun.com
+
+## ページ一覧
+
+### 消費税（Sales Tax）
+URL: https://us.bloomsfun.com/tax.html
+内容: 州別の消費税率マップ（2026年版）。ゼロの州（オレゴン・ニューハンプシャー等）から10%超の州（テネシー・ルイジアナ等）まで全50州を比較。出典: Tax Foundation。
+
+### 所得税（Income Tax）
+URL: https://us.bloomsfun.com/income-tax.html
+内容: 州別の個人所得税率（2025年版）。所得税ゼロの9州（フロリダ・テキサス等）から最高13.3%（カリフォルニア）まで。出典: Tax Foundation。
+
+### 最低賃金（Minimum Wage）
+URL: https://us.bloomsfun.com/minimum-wage.html
+内容: 州別最低賃金（2025年版）。連邦$7.25から州独自の$17.50（ワシントン州）まで。出典: U.S. Department of Labor。
+
+### 銃犯罪（Firearm Mortality）
+URL: https://us.bloomsfun.com/guns.html
+内容: 州別の銃死亡率（10万人あたり）。出典: CDC（疾病対策予防センター）2024年データ。
+
+### 犯罪率（Crime Rate）
+URL: https://us.bloomsfun.com/crime.html
+内容: 州別の暴力犯罪率・財産犯罪率。出典: FBI Uniform Crime Reporting (UCR) Program。
+
+### 生活費（Cost of Living）
+URL: https://us.bloomsfun.com/cost-of-living.html
+内容: 州別生活コスト指数。ハワイが全米最高（平均比+91%）、ミシシッピが最安（-16%）。主要都市の月額生活費内訳付き。出典: MERIC（Missouri Economic Research and Information Center）。
+
+### 家賃（Rent）
+URL: https://us.bloomsfun.com/rent.html
+内容: 州別・都市別の1ベッドルーム平均家賃。全米平均$1,900。サンフランシスコ$3,500超、ミシシッピ$850。出典: Zillow Research・Apartment List。
+
+### 酒税・たばこ税（Excise Tax）
+URL: https://us.bloomsfun.com/alcohol.html
+内容: 州別のスピリッツ・ビール・ワイン・たばこ税率マップ。出典: Tax Foundation。
+
+### 在住日本人数（Japanese Population）
+URL: https://us.bloomsfun.com/japanese.html
+内容: 州別の日系人口。カリフォルニア・ハワイに集中。出典: 2020年米国国勢調査。
+
+### 国立公園（National Parks）
+URL: https://us.bloomsfun.com/landmarks.html
+内容: アメリカの主な国立公園マップ。イエローストーン・グランドキャニオン等20か所以上。出典: National Park Service (NPS)。
+
+## 主要データポイント
+
+- アメリカの消費税がゼロの州: オレゴン、ニューハンプシャー、モンタナ、デラウェア、アラスカ
+- 所得税がゼロの州: フロリダ、テキサス、ネバダ、ワシントン州、ワイオミング、サウスダコタ、アラスカ、ニューハンプシャー、テネシー
+- 連邦最低賃金: $7.25（2009年から不変）
+- 最高州最低賃金: ワシントン州 $17.50（2025年）
+- 全米平均家賃（1BR）: 約$1,900/月（2025年）
+- 最も治安が良い州: メイン（暴力犯罪率107件/10万人）
+- 最も犯罪率が高い州: ニューメキシコ（778件/10万人）

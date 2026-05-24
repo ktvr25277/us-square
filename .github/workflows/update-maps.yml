@@ -1,0 +1,63 @@
+name: Update Tax Foundation Maps
+
+on:
+  schedule:
+    - cron: '0 0 1 * *'
+  workflow_dispatch:
+
+jobs:
+  update-maps:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check and update Sales Tax map
+        run: |
+          node -e "
+          const https = require('https');
+          const fs = require('fs');
+
+          function fetch(url) {
+            return new Promise((res, rej) => {
+              https.get(url, {headers:{'User-Agent':'Mozilla/5.0'}}, r => {
+                if (r.statusCode >= 300 && r.statusCode < 400) return fetch(r.headers.location).then(res).catch(rej);
+                const c = []; r.on('data',d=>c.push(d)); r.on('end',()=>res(Buffer.concat(c)));
+              }).on('error',rej);
+            });
+          }
+
+          (async () => {
+            const pages = [
+              {url:'https://taxfoundation.org/data/all/state/sales-tax-rates/',   out:'images/tax.png'},
+              {url:'https://taxfoundation.org/data/all/state/state-income-tax-rates/', out:'images/income-tax.png'},
+            ];
+
+            for (const p of pages) {
+              try {
+                const html = (await fetch(p.url)).toString();
+                const matches = [...html.matchAll(/https?:\/\/taxfoundation\.org\/wp-content\/uploads\/(\d{4})\/(\d{2})\/([^"' \n]+\.png)/g)]
+                  .map(m => ({url:m[0],y:+m[1],mo:+m[2]}))
+                  .filter(m => !m.url.match(/-\d+x\d+\.png/) && !m.url.includes('screenshot') && !m.url.includes('logo'));
+                if (!matches.length) { console.log('no img:'+p.out); continue; }
+                matches.sort((a,b)=>b.y-a.y||b.mo-a.mo);
+                const imgUrl = matches[0].url;
+                const newBuf = await fetch(imgUrl);
+                const oldBuf = fs.existsSync(p.out) ? fs.readFileSync(p.out) : null;
+                if (oldBuf && newBuf.equals(oldBuf)) { console.log('unchanged:'+p.out); continue; }
+                fs.writeFileSync(p.out, newBuf);
+                console.log('updated:'+p.out+' from:'+imgUrl);
+              } catch(e) { console.error('err:'+p.out+':'+e.message); }
+            }
+          })();
+          "
+
+      - name: Commit if changed
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          git add images/tax.png images/income-tax.png
+          git diff --staged --quiet || git commit -m "Auto-update: Tax Foundation maps $(date +'%Y-%m')"
+          git push

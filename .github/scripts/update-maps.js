@@ -104,8 +104,8 @@ async function updateMap(item) {
   // HTMLの年号表記を更新
   if (latestYear && currentHtml) {
     const updatedHtml = currentHtml
-      .replace(/（\d{4}年版）/g, `（${latestYear}年版）`)
-      .replace(/（\d{4}年1月版）/g, `（${latestYear}年1月版）`);
+      .replace(/（\d{4}年(\d+月)?版）/g, `（${latestYear}年1月版）`)
+      ;
     if (updatedHtml !== currentHtml) {
       fs.writeFileSync(htmlFilePath, updatedHtml);
       console.log(`✅ ${htmlFilePath} の年号を ${latestYear} に更新`);
@@ -132,3 +132,4 @@ async function updateMap(item) {
     console.log('\n✅ すべて最新です（変更なし）');
   }
 })();
+

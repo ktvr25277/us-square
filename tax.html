@@ -249,6 +249,7 @@ footer span{color:var(--gold)}
   .hero{padding:36px 5% 32px}
 }
 
+.section{margin-bottom:50px}.section h2{font-family:'Georgia','Times New Roman',serif;font-size:22px;color:#fff;font-weight:700;margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--border)}.section h3{font-size:17px;font-weight:700;color:var(--gold-light);margin:24px 0 12px}.section p{line-height:1.9;color:var(--text-muted);margin-bottom:14px}.section p strong{color:var(--text)}.data-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}.data-table th{background:var(--navy2);color:var(--gold);padding:10px 14px;text-align:left;border-bottom:1px solid var(--border)}.data-table td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.05);color:var(--text-muted)}.data-table tr:hover td{background:rgba(255,255,255,0.03)}.data-table td strong{color:var(--text)}.tag-high{background:rgba(231,76,60,0.2);color:#e74c3c;padding:2px 8px;border-radius:3px;font-size:12px}.tag-zero{background:rgba(46,204,113,0.2);color:#2ecc71;padding:2px 8px;border-radius:3px;font-size:12px}.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:20px 0}.info-card{background:var(--navy2);border:1px solid var(--border);border-radius:8px;padding:20px}.info-card .num{font-size:32px;font-weight:900;color:var(--gold);line-height:1}.info-card .label{font-size:12px;color:var(--text-muted);margin-top:6px}.info-card .desc{font-size:13px;color:var(--text);margin-top:8px}.alert{background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);border-radius:8px;padding:16px 20px;margin:20px 0;font-size:14px;color:var(--text-muted)}.alert strong{color:var(--gold)}
 .faq-section { margin-bottom: 50px; }
 .faq-item { background: var(--navy2); border: 1px solid var(--border); border-radius: 8px; padding: 20px 24px; margin-bottom: 12px; }
 .faq-q { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
@@ -323,6 +324,56 @@ footer span{color:var(--gold)}
 </div>
 
 </main>
+
+<div class="container" style="max-width:1100px;margin:0 auto;padding:0 5% 50px">
+<div class="section"><div class="info-grid">
+<div class="info-card"><div class="num">5州</div><div class="label">消費税ゼロの州</div><div class="desc">オレゴン・モンタナ・デラウェアなど</div></div>
+<div class="info-card"><div class="num">9.55%</div><div class="label">最高水準（テネシー州 合算平均）</div><div class="desc">州税7%＋地方税平均2.55%</div></div>
+<div class="info-card"><div class="num">非課税</div><div class="label">食料品・処方薬は多くの州で免税</div><div class="desc">州によってルールが異なる</div></div>
+<div class="info-card"><div class="num">外税方式</div><div class="label">表示価格に税は含まれない</div><div class="desc">レジで加算される（日本と異なる点）</div></div>
+</div></div>
+
+<div class="section"><h2>Sales Tax の仕組み：日本の消費税との違い</h2>
+<h3>1. 外税方式（Tax-Exclusive）</h3>
+<p>日本の消費税は「税込価格」が店頭に表示されますが、アメリカの Sales Tax は<strong>表示価格に含まれていません</strong>。レジで初めて税額が加算されるため、$9.99の商品が実際には$10.80になるといったことが日常的に起こります。</p>
+<h3>2. 州税＋地方税の二層構造</h3>
+<p>Sales Tax は<strong>州税（State Tax）</strong>と<strong>地方税（Local Tax＝郡・市・特別区の税）</strong>の合算です。同じ州の中でも都市によって税率が異なるため、ロサンゼルスとサンディエゴでは税率が違うということが普通に起こります。</p>
+<h3>3. 課税対象が州ごとに異なる</h3>
+<p>日本の消費税はほぼすべての商品・サービスに一律10%（軽減税率8%）ですが、アメリカでは<strong>何が課税対象かは州ごとに異なります</strong>。たとえば食料品（Groceries）は多くの州で非課税ですが、一部の州では課税されます。衣料品もニューヨーク州・ニュージャージー州では$110以下は非課税です。</p></div>
+
+<div class="section"><h2>消費税（合算平均）が高い州 上位10州</h2>
+<p>州税と地方税を合算した平均税率で比較した上位10州です。</p>
+<table class="data-table"><tr><th>州</th><th>合算平均税率</th><th>内訳・備考</th></tr>
+<tr><td><strong>ルイジアナ</strong></td><td><span class="tag-high">9.56%</span></td><td>州税4.45%＋地方税が全米最高水準</td></tr>
+<tr><td><strong>テネシー</strong></td><td><span class="tag-high">9.55%</span></td><td>州税7%。食料品にも4%課税</td></tr>
+<tr><td><strong>アーカンソー</strong></td><td><span class="tag-high">9.44%</span></td><td>州税6.5%＋地方税約3%</td></tr>
+<tr><td><strong>ワシントン州</strong></td><td><span class="tag-high">9.29%</span></td><td>所得税なしの代わりに消費税が高い</td></tr>
+<tr><td><strong>アラバマ</strong></td><td><span class="tag-high">9.29%</span></td><td>食料品にもフル課税される珍しい州</td></tr>
+<tr><td><strong>オクラホマ</strong></td><td><span class="tag-high">8.98%</span></td><td>州税4.5%＋地方税が高い</td></tr>
+<tr><td><strong>カリフォルニア</strong></td><td><span class="tag-high">8.85%</span></td><td>州税7.25%は全米最高の州税率</td></tr>
+<tr><td><strong>イリノイ</strong></td><td><span class="tag-high">8.84%</span></td><td>シカゴ市内は10.25%に達する</td></tr>
+<tr><td><strong>カンザス</strong></td><td><span class="tag-high">8.71%</span></td><td>食料品にもフル課税</td></tr>
+<tr><td><strong>ニューヨーク</strong></td><td><span class="tag-high">8.52%</span></td><td>NYC市内は8.875%。衣料品$110以下は非課税</td></tr></table></div>
+
+<div class="section"><h2>消費税がゼロまたは低い州</h2>
+<p>以下の5州は州消費税がゼロです。ただし所得税や固定資産税が高い場合もあります。</p>
+<table class="data-table"><tr><th>州</th><th>州税率</th><th>備考</th></tr>
+<tr><td><strong>オレゴン</strong></td><td><span class="tag-zero">0%</span></td><td>所得税は最高9.9%と高め。旅行者の買い物天国</td></tr>
+<tr><td><strong>ニューハンプシャー</strong></td><td><span class="tag-zero">0%</span></td><td>所得税もなし。アウトレットモールが人気</td></tr>
+<tr><td><strong>モンタナ</strong></td><td><span class="tag-zero">0%</span></td><td>リゾート地区では独自の課税あり</td></tr>
+<tr><td><strong>デラウェア</strong></td><td><span class="tag-zero">0%</span></td><td>法人設立が多い州。アウトレットも人気</td></tr>
+<tr><td><strong>アラスカ</strong></td><td><span class="tag-zero">0%</span></td><td>州税はゼロだが地方税あり（平均1.76%）</td></tr></table></div>
+
+<div class="section"><h2>日本人旅行者・赴任者向けの実用情報</h2>
+<div class="alert"><strong>💡 ポイント：</strong>アメリカの店頭価格にはSales Taxが含まれていません。$100の靴をニューヨークで買うと実際の支払いは約$109になります。一方、オレゴン州なら$100ちょうどです。</div>
+<h3>旅行者は免税（Tax Free）の恩恵を受けられる？</h3>
+<p>ヨーロッパの VAT Refund のような<strong>旅行者向け免税制度はアメリカにはほぼありません</strong>。ルイジアナ州が唯一「Louisiana Tax Free Shopping」という外国人旅行者向けの還付制度を設けていますが、対象店舗が限られ手続きも複雑です。</p>
+<h3>オンラインショッピングの税金</h3>
+<p>2018年の最高裁判決（South Dakota v. Wayfair）以降、<strong>オンラインショッピングでも Sales Tax が課税される</strong>ようになりました。現在はほぼすべてのオンライン購入に購入者の居住州の税率が適用されます。</p>
+<h3>買い物で得する州・損する州</h3>
+<p>旅行の買い物をまとめる州を選べるなら、<strong>オレゴン（0%）やニューハンプシャー（0%）</strong>での購入がおすすめです。ニューヨークでは<strong>衣料品・靴が$110以下なら非課税</strong>という独自ルールがあるため、ブランド品を1点ずつ$110以下に抑えると節税になります。</p>
+<p>出典：<a href="https://taxfoundation.org/data/all/state/2025-sales-taxes/" target="_blank" rel="noopener" style="color:var(--gold)">Tax Foundation — State and Local Sales Tax Rates, 2025</a></p></div>
+</div>
 
   <div class="section faq-section">
     <h2>よくある質問</h2>

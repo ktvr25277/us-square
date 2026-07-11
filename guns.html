@@ -249,6 +249,7 @@ footer span{color:var(--gold)}
   .hero{padding:36px 5% 32px}
 }
 
+.section{margin-bottom:50px}.section h2{font-family:'Georgia','Times New Roman',serif;font-size:22px;color:#fff;font-weight:700;margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--border)}.section h3{font-size:17px;font-weight:700;color:var(--gold-light);margin:24px 0 12px}.section p{line-height:1.9;color:var(--text-muted);margin-bottom:14px}.section p strong{color:var(--text)}.data-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}.data-table th{background:var(--navy2);color:var(--gold);padding:10px 14px;text-align:left;border-bottom:1px solid var(--border)}.data-table td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.05);color:var(--text-muted)}.data-table tr:hover td{background:rgba(255,255,255,0.03)}.data-table td strong{color:var(--text)}.tag-high{background:rgba(231,76,60,0.2);color:#e74c3c;padding:2px 8px;border-radius:3px;font-size:12px}.tag-zero{background:rgba(46,204,113,0.2);color:#2ecc71;padding:2px 8px;border-radius:3px;font-size:12px}.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:20px 0}.info-card{background:var(--navy2);border:1px solid var(--border);border-radius:8px;padding:20px}.info-card .num{font-size:32px;font-weight:900;color:var(--gold);line-height:1}.info-card .label{font-size:12px;color:var(--text-muted);margin-top:6px}.info-card .desc{font-size:13px;color:var(--text);margin-top:8px}.alert{background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);border-radius:8px;padding:16px 20px;margin:20px 0;font-size:14px;color:var(--text-muted)}.alert strong{color:var(--gold)}
 .faq-section { margin-bottom: 50px; }
 .faq-item { background: var(--navy2); border: 1px solid var(--border); border-radius: 8px; padding: 20px 24px; margin-bottom: 12px; }
 .faq-q { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
@@ -284,7 +285,7 @@ footer span{color:var(--gold)}
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [{"@type":"Question","name":"アメリカで銃による死亡者が多い州はどこですか？","acceptedAnswer":{"@type":"Answer","text":"CDC統計ではミシシッピ・ルイジアナ・ワイオミングなど南部・山岳部の州で10万人あたりの銃死亡率が高い傾向があります。銃自殺と銃犯罪の両方が含まれます。"}},{"@type":"Question","name":"アメリカの銃死亡率は日本と比べてどうですか？","acceptedAnswer":{"@type":"Answer","text":"アメリカの銃死亡率は日本の数十倍以上です。日本は銃規制が非常に厳しく、銃による死亡はほぼゼロに近い水準です。"}}]
+  "mainEntity": [{"@type":"Question","name":"アメリカで銃による死亡者が多い州はどこですか？","acceptedAnswer":{"@type":"Answer","text":"CDC統計ではミシシッピ・ルイジアナ・ワイオミングなど南部・山岳部の州で10万人あたりの銃死亡率が高い傾向があります。銃自殺と銃犯罪の両方が含まれます。"}},{"@type":"Question","name":"アメリカの銃死亡率は日本と比べてどうですか？","acceptedAnswer":{"@type":"Answer","text":"アメリカの銃死亡率は日本の数十倍以上です。日本は銃規制が非常に厳しく、銃による死亡はほぼゼロに近い水準です。"}},{"@type":"Question","name":"銃社会のアメリカで安全に暮らすにはどうすればいいですか？","acceptedAnswer":{"@type":"Answer","text":"銃死亡の半数以上は自殺で、犯罪被害の多くは面識のある者同士のトラブルが占めます。観光客や一般の赴任者が無差別に巻き込まれる確率は統計上高くありませんが、州や地域によってリスクの水準が大きく異なるため、居住・渡航予定地の統計を事前に確認することが有効です。"}}]
 }
 </script>
 </head>
@@ -323,13 +324,57 @@ footer span{color:var(--gold)}
 
 </main>
 
+<div class="container" style="max-width:1100px;margin:0 auto;padding:0 5% 50px">
+<div class="section"><div class="info-grid">
+<div class="info-card"><div class="num">12.8</div><div class="label">全米平均（10万人あたり・2024年）</div><div class="desc">銃自殺・銃殺人・その他を含む総合値</div></div>
+<div class="info-card"><div class="num">28.0</div><div class="label">最も高い州：ミシシッピ州</div><div class="desc">全米平均の2倍以上</div></div>
+<div class="info-card"><div class="num">3.7</div><div class="label">最も低い州：ハワイ州</div><div class="desc">全米平均の3分の1以下</div></div>
+<div class="info-card"><div class="num">0.005</div><div class="label">日本の銃殺人率（参考）</div><div class="desc">2019年は全国で銃による死者9人（WHO）</div></div>
+</div></div>
+
+<div class="section"><h2>アメリカの銃社会と日本の治安の違い</h2>
+<h3>1. 「銃社会」の実態は自殺が半数以上</h3>
+<p>2024年の全米の銃関連死亡者数44,447人のうち、<strong>自殺が27,593人（約62%）</strong>を占め、殺人は15,364人（約35%）でした。ニュースで報じられる銃乱射事件のイメージが強いですが、統計上は「銃による自殺」が最大の死因区分になっている点は、日本にはあまり伝わっていない実態です。</p>
+<h3>2. 州によって危険度は最大8倍近く違う</h3>
+<p>全米平均は10万人あたり12.8人ですが、最も高いミシシッピ州（28.0人）と最も低いハワイ州（3.7人）の差は<strong>約8倍</strong>です。「アメリカ＝銃社会」と一括りにするのではなく、渡航・赴任予定の州ごとの実情を把握することが実用的な安全対策になります。</p>
+<h3>3. 日本との比較：規制の厳しさが桁違い</h3>
+<p>日本では拳銃の所持がほぼ全面的に禁止されており、猟銃・空気銃も購入には技能講習の受講・実技試験（的中率95%以上）・家族への聞き取りを含む身辺調査・精神科医の診断書などが必要です。この結果、日本の銃による死者は<strong>年間一桁台（2019年は9人）</strong>にとどまり、人口10万人あたりの銃殺人率は0.005人程度と、アメリカのどの州と比べても桁違いに低い水準です。</p></div>
+
+<div class="section"><h2>州別ランキング（2024年 CDC統計）</h2>
+<p>人口10万人あたりの銃関連死亡者数（自殺・殺人・その他を含む総合値）の上位・下位5州です。</p>
+<table class="data-table"><tr><th>州</th><th>10万人あたり</th><th>備考</th></tr>
+<tr><td><strong>ミシシッピ</strong></td><td><span class="tag-high">28.0</span></td><td>全米最高水準。銃殺人率も上位</td></tr>
+<tr><td><strong>ニューメキシコ</strong></td><td><span class="tag-high">26.6</span></td><td>銃殺人率も全米上位クラス</td></tr>
+<tr><td><strong>アラスカ</strong></td><td><span class="tag-high">24.4</span></td><td>銃自殺率が特に高い</td></tr>
+<tr><td><strong>アラバマ</strong></td><td><span class="tag-high">23.7</span></td><td>銃殺人率も上位クラス</td></tr>
+<tr><td><strong>ワイオミング</strong></td><td><span class="tag-high">23.4</span></td><td>銃自殺率が全米最高水準</td></tr>
+</table>
+<table class="data-table"><tr><th>州</th><th>10万人あたり</th><th>備考</th></tr>
+<tr><td><strong>ハワイ</strong></td><td><span class="tag-zero">3.7</span></td><td>全米最低水準。銃規制が厳しい</td></tr>
+<tr><td><strong>マサチューセッツ</strong></td><td><span class="tag-zero">3.8</span></td><td>銃規制が全米で最も厳しい州の一つ</td></tr>
+<tr><td><strong>ニュージャージー</strong></td><td><span class="tag-zero">4.0</span></td><td>都市部中心だが治安は安定</td></tr>
+<tr><td><strong>ニューヨーク</strong></td><td><span class="tag-zero">4.4</span></td><td>ニューヨーク市も含め比較的低水準</td></tr>
+<tr><td><strong>ロードアイランド</strong></td><td><span class="tag-zero">4.6</span></td><td>面積が小さく都市部の銃規制も厳格</td></tr>
+</table></div>
+
+<div class="section"><h2>日本人留学生・赴任者向けの実用情報</h2>
+<div class="alert"><strong>💡 ポイント：</strong>銃関連死のうち約6割は自殺であり、観光客や赴任者が事件に巻き込まれる確率は報道のイメージほど高くありません。ただし州によるリスク差は大きいため、渡航・居住予定地の統計は事前に確認しておきましょう。</div>
+<h3>安全な地域を選ぶ目安</h3>
+<p>大学院留学や駐在で赴任先を選べる場合、ハワイ・マサチューセッツ・ニュージャージー・ニューヨーク・ロードアイランドなどは銃関連死亡率が全米でも低水準です。都市部だから危険、地方だから安全、という単純な図式ではなく、<strong>州単位の統計をまず確認する</strong>のが実用的です。</p>
+<h3>日常生活での心構え</h3>
+<p>アメリカでは護身のための銃所持が合法な州が多く、口論やトラブルの際に日本の感覚以上に距離を取ることが重要です。交通トラブルやクラクションの鳴らし合いなど、些細なきっかけが深刻化するケースも報告されています。</p>
+<p>出典：<a href="https://www.pewresearch.org/short-reads/2026/04/28/what-the-data-says-about-gun-deaths-in-the-us/" target="_blank" rel="noopener" style="color:var(--gold)">Pew Research Center — What the data says about gun deaths in the U.S.（CDC 2024年データに基づく）</a></p></div>
+</div>
+
   <div class="section faq-section">
     <h2>よくある質問</h2>
-    <div class="faq-item"><h3 class="faq-q">アメリカで銃による死亡者が多い州はどこですか？</h3><p class="faq-a">CDC統計ではミシシッピ・ルイジアナ・ワイオミングなど南部・山岳部の州で10万人あたりの銃死亡率が高い傾向があります。</p></div>
+    <div class="faq-item"><h3 class="faq-q">アメリカで銃による死亡者が多い州はどこですか？</h3><p class="faq-a">CDC統計ではミシシッピ・ニューメキシコ・アラスカ・アラバマ・ワイオミングが2024年の上位5州です。銃自殺と銃殺人の両方が含まれます。</p></div>
     <div class="faq-item"><h3 class="faq-q">アメリカの銃死亡率は日本と比べてどうですか？</h3><p class="faq-a">アメリカの銃死亡率は日本の数十倍以上です。日本は銃規制が非常に厳しく、銃による死亡はほぼゼロに近い水準です。</p></div>
+    <div class="faq-item"><h3 class="faq-q">銃社会のアメリカで安全に暮らすにはどうすればいいですか？</h3><p class="faq-a">銃死亡の半数以上は自殺で、犯罪被害の多くは面識のある者同士のトラブルが占めます。渡航・居住予定地の統計を事前に確認することが実用的な対策になります。</p></div>
   </div>
 <footer>
   &copy; <span>US SQUARE</span> — アメリカ情報まとめサイト
+<span style="font-size:12px;margin-top:10px;display:inline-block"><a href="privacy.html">プライバシーポリシー</a> ・ <a href="about.html">運営者情報</a> ・ <a href="contact.html">お問い合わせ</a></span>
 </footer>
 
 </body>

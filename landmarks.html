@@ -249,6 +249,7 @@ footer span{color:var(--gold)}
   .hero{padding:36px 5% 32px}
 }
 
+.section{margin-bottom:50px}.section h2{font-family:'Georgia','Times New Roman',serif;font-size:22px;color:#fff;font-weight:700;margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--border)}.section h3{font-size:17px;font-weight:700;color:var(--gold-light);margin:24px 0 12px}.section p{line-height:1.9;color:var(--text-muted);margin-bottom:14px}.section p strong{color:var(--text)}.data-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}.data-table th{background:var(--navy2);color:var(--gold);padding:10px 14px;text-align:left;border-bottom:1px solid var(--border)}.data-table td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.05);color:var(--text-muted)}.data-table tr:hover td{background:rgba(255,255,255,0.03)}.data-table td strong{color:var(--text)}.tag-high{background:rgba(231,76,60,0.2);color:#e74c3c;padding:2px 8px;border-radius:3px;font-size:12px}.tag-zero{background:rgba(46,204,113,0.2);color:#2ecc71;padding:2px 8px;border-radius:3px;font-size:12px}.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:20px 0}.info-card{background:var(--navy2);border:1px solid var(--border);border-radius:8px;padding:20px}.info-card .num{font-size:32px;font-weight:900;color:var(--gold);line-height:1}.info-card .label{font-size:12px;color:var(--text-muted);margin-top:6px}.info-card .desc{font-size:13px;color:var(--text);margin-top:8px}.alert{background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);border-radius:8px;padding:16px 20px;margin:20px 0;font-size:14px;color:var(--text-muted)}.alert strong{color:var(--gold)}
 .faq-section { margin-bottom: 50px; }
 .faq-item { background: var(--navy2); border: 1px solid var(--border); border-radius: 8px; padding: 20px 24px; margin-bottom: 12px; }
 .faq-q { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
@@ -284,7 +285,7 @@ footer span{color:var(--gold)}
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [{"@type":"Question","name":"アメリカの国立公園はいくつありますか？","acceptedAnswer":{"@type":"Answer","text":"National Park Serviceが管理する国立公園は63か所（2024年時点）あります。自然・歴史・文化の多様な資源を保護しており、年間訪問者数は3億人以上にのぼります。"}},{"@type":"Question","name":"アメリカで一番人気の国立公園はどこですか？","acceptedAnswer":{"@type":"Answer","text":"Great Smoky Mountains（グレートスモーキーマウンテンズ）が年間約1,200万人と最多訪問者数を誇ります。次いでGrand Canyon・Zionが人気です。"}}]
+  "mainEntity": [{"@type":"Question","name":"アメリカの国立公園はいくつありますか？","acceptedAnswer":{"@type":"Answer","text":"National Park Serviceが管理する国立公園は63か所（2024年時点）あります。自然・歴史・文化の多様な資源を保護しており、年間訪問者数は3億人以上にのぼります。"}},{"@type":"Question","name":"アメリカで一番人気の国立公園はどこですか？","acceptedAnswer":{"@type":"Answer","text":"Great Smoky Mountains（グレートスモーキーマウンテンズ）が年間約1,200万人と最多訪問者数を誇ります。次いでGrand Canyon・Zionが人気です。"}},{"@type":"Question","name":"2026年から国立公園の入場料は変わりましたか？","acceptedAnswer":{"@type":"Answer","text":"2026年1月から、アメリカ非居住者（外国人観光客）向けの年間パスが250ドルに値上げされ、さらにイエローストーン・グランドキャニオン・ヨセミテなど最も人気の高い11公園では、16歳以上の非居住者に通常料金に加えて1人100ドルの追加料金が課されるようになりました。"}}]
 }
 </script>
 </head>
@@ -323,13 +324,51 @@ footer span{color:var(--gold)}
 
 </main>
 
+<div class="container" style="max-width:1100px;margin:0 auto;padding:0 5% 50px">
+<div class="section"><div class="info-grid">
+<div class="info-card"><div class="num">63</div><div class="label">国立公園の数</div><div class="desc">National Park Service管理</div></div>
+<div class="info-card"><div class="num">3.23億人</div><div class="label">2025年の年間訪問者数（全ユニット合計）</div><div class="desc">前年比2.7%減</div></div>
+<div class="info-card"><div class="num">$0</div><div class="label">Great Smoky Mountainsの入園料</div><div class="desc">最多訪問なのに無料</div></div>
+<div class="info-card"><div class="num">$100</div><div class="label">2026年〜非居住者向け追加料金（人気11公園）</div><div class="desc">通常料金に上乗せ</div></div>
+</div></div>
+
+<div class="section"><h2>「一番人気」は実は無料で入れる公園だった</h2>
+<h3>1. Great Smoky Mountainsが1位の理由は「入園無料」</h3>
+<p>年間約1,150万人が訪れ全米最多を誇るGreat Smoky Mountains国立公園ですが、実は<strong>入園料が完全無料</strong>です。テネシー州がノースカロライナ州への道路譲渡と引き換えに「永久に無料開放」する条件を課した歴史的経緯があり、これがイエローストーンやグランドキャニオンよりも突出した訪問者数につながっています。</p>
+<h3>2. 人気公園トップ7の顔ぶれ</h3>
+<p>2位はZion（ユタ州・約500万人）、3位はYellowstone（約480万人）、4位はGrand Canyon（約440万人）、5位はYosemite（約430万人）と続きます。上位のほとんどは有料公園で、車両1台あたり20〜35ドル程度の入園料がかかります。</p>
+<h3>3. 2026年から外国人観光客の料金体系が変わった</h3>
+<p>2026年1月から、America the Beautiful年間パスは米国居住者80ドルのまま据え置かれた一方、<strong>非居住者（外国人観光客）は250ドルに値上げ</strong>されました。さらにイエローストーン・グランドキャニオン・ヨセミテ・グレイシャーなど最も人気の高い11公園では、16歳以上の非居住者に通常の入園料に加えて<strong>1人あたり100ドルの追加料金</strong>が課されるようになりました。日本からの旅行者が複数の人気公園を回る予定なら、年間パスの購入が結果的に安くなるケースが多くなっています。</p></div>
+
+<div class="section"><h2>年間来場者数ランキング（上位7公園）</h2>
+<table class="data-table"><tr><th>順位</th><th>公園名</th><th>年間来場者数</th><th>入園料（非居住者・2026年）</th></tr>
+<tr><td>1</td><td><strong>Great Smoky Mountains</strong></td><td>約1,150万人</td><td><span class="tag-zero">無料</span></td></tr>
+<tr><td>2</td><td><strong>Zion</strong></td><td>約500万人</td><td><span class="tag-high">車両35ドル＋$100/人</span></td></tr>
+<tr><td>3</td><td><strong>Yellowstone</strong></td><td>約480万人</td><td><span class="tag-high">車両35ドル＋$100/人</span></td></tr>
+<tr><td>4</td><td><strong>Grand Canyon</strong></td><td>約440万人</td><td><span class="tag-high">車両35ドル＋$100/人</span></td></tr>
+<tr><td>5</td><td><strong>Yosemite</strong></td><td>約430万人</td><td><span class="tag-high">車両35ドル＋$100/人</span></td></tr>
+<tr><td>6</td><td><strong>Rocky Mountain</strong></td><td>約420万人</td><td><span class="tag-high">車両30ドル＋$100/人</span></td></tr>
+<tr><td>7</td><td><strong>Acadia</strong></td><td>約410万人</td><td><span class="tag-high">車両30ドル＋$100/人</span></td></tr>
+</table></div>
+
+<div class="section"><h2>日本人旅行者向けの実用情報</h2>
+<div class="alert"><strong>💡 ポイント：</strong>2026年から非居住者向けの追加料金（$100/人）が11公園で導入されました。イエローストーン＋グランドキャニオンなど2か所以上を回る予定なら、非居住者向け年間パス（250ドル）の方が割安になる可能性があります。</div>
+<h3>追加料金対象の11公園</h3>
+<p>Acadia・Bryce Canyon・Everglades・Glacier・Grand Canyon・Grand Teton・Rocky Mountain・Sequoia＆Kings Canyon・Yellowstone・Yosemite・Zionの11公園が対象です。これらを訪れる予定がある場合は、事前にRecreation.govで年間パスを購入しておくと入園時の手続きがスムーズです。</p>
+<h3>無料で楽しめる公園も検討を</h3>
+<p>Great Smoky Mountainsのように入園無料の公園も多数あります。予算を抑えたい旅行者は、追加料金のかからない公園を旅程に組み込むのも一つの方法です。</p>
+<p>出典：<a href="https://www.nps.gov/aboutus/nonresident-fees.htm" target="_blank" rel="noopener" style="color:var(--gold)">National Park Service — Nonresident Fees</a>／<a href="https://www.nps.gov/subjects/socialscience/visitor-use-statistics-dashboard.htm" target="_blank" rel="noopener" style="color:var(--gold)">NPS Visitor Use Statistics</a></p></div>
+</div>
+
   <div class="section faq-section">
     <h2>よくある質問</h2>
-    <div class="faq-item"><h3 class="faq-q">アメリカの国立公園はいくつありますか？</h3><p class="faq-a">National Park Serviceが管理する国立公園は63か所（2024年時点）あります。年間訪問者数は3億人以上にのぼります。</p></div>
-    <div class="faq-item"><h3 class="faq-q">アメリカで一番人気の国立公園はどこですか？</h3><p class="faq-a">Great Smoky Mountainsが年間約1,200万人と最多訪問者数を誇ります。次いでGrand Canyon・Zionが人気です。</p></div>
+    <div class="faq-item"><h3 class="faq-q">アメリカの国立公園はいくつありますか？</h3><p class="faq-a">National Park Serviceが管理する国立公園は63か所あります。2025年の全ユニット合計の年間訪問者数は約3.23億人でした。</p></div>
+    <div class="faq-item"><h3 class="faq-q">アメリカで一番人気の国立公園はどこですか？</h3><p class="faq-a">Great Smoky Mountainsが年間約1,150万人と最多訪問者数を誇ります。しかもこの公園は入園料が完全無料です。次いでZion・Yellowstoneが人気です。</p></div>
+    <div class="faq-item"><h3 class="faq-q">2026年から国立公園の入場料は変わりましたか？</h3><p class="faq-a">2026年1月から、非居住者向けの年間パスが250ドルに値上げされ、イエローストーン・グランドキャニオンなど人気11公園では16歳以上の非居住者に1人100ドルの追加料金が導入されました。</p></div>
   </div>
 <footer>
   &copy; <span>US SQUARE</span> — アメリカ情報まとめサイト
+<span style="font-size:12px;margin-top:10px;display:inline-block"><a href="privacy.html">プライバシーポリシー</a> ・ <a href="about.html">運営者情報</a> ・ <a href="contact.html">お問い合わせ</a></span>
 </footer>
 
 </body>

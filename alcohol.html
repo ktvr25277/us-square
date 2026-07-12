@@ -249,6 +249,7 @@ footer span{color:var(--gold)}
   .hero{padding:36px 5% 32px}
 }
 
+.section{margin-bottom:50px}.section h2{font-family:'Georgia','Times New Roman',serif;font-size:22px;color:#fff;font-weight:700;margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--border)}.section h3{font-size:17px;font-weight:700;color:var(--gold-light);margin:24px 0 12px}.section p{line-height:1.9;color:var(--text-muted);margin-bottom:14px}.section p strong{color:var(--text)}.data-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px}.data-table th{background:var(--navy2);color:var(--gold);padding:10px 14px;text-align:left;border-bottom:1px solid var(--border)}.data-table td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,0.05);color:var(--text-muted)}.data-table tr:hover td{background:rgba(255,255,255,0.03)}.data-table td strong{color:var(--text)}.tag-high{background:rgba(231,76,60,0.2);color:#e74c3c;padding:2px 8px;border-radius:3px;font-size:12px}.tag-zero{background:rgba(46,204,113,0.2);color:#2ecc71;padding:2px 8px;border-radius:3px;font-size:12px}.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:20px 0}.info-card{background:var(--navy2);border:1px solid var(--border);border-radius:8px;padding:20px}.info-card .num{font-size:32px;font-weight:900;color:var(--gold);line-height:1}.info-card .label{font-size:12px;color:var(--text-muted);margin-top:6px}.info-card .desc{font-size:13px;color:var(--text);margin-top:8px}.alert{background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);border-radius:8px;padding:16px 20px;margin:20px 0;font-size:14px;color:var(--text-muted)}.alert strong{color:var(--gold)}
 .faq-section { margin-bottom: 50px; }
 .faq-item { background: var(--navy2); border: 1px solid var(--border); border-radius: 8px; padding: 20px 24px; margin-bottom: 12px; }
 .faq-q { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
@@ -284,7 +285,7 @@ footer span{color:var(--gold)}
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [{"@type":"Question","name":"アメリカで酒税が一番高い州はどこですか？","acceptedAnswer":{"@type":"Answer","text":"スピリッツ（蒸留酒）の税率はワシントン州が全米最高水準です。たばこ税はニューヨーク州が最も高く、1箱あたりの税額が全米トップです。"}},{"@type":"Question","name":"アメリカのたばこは日本より安いですか？","acceptedAnswer":{"@type":"Answer","text":"州によって大きく異なります。税率が低い南部の州では日本より安い場合もありますが、ニューヨークやカリフォルニアでは日本と同水準か高いこともあります。"}}]
+  "mainEntity": [{"@type":"Question","name":"アメリカで酒税が一番高い州はどこですか？","acceptedAnswer":{"@type":"Answer","text":"スピリッツ（蒸留酒）の税率はワシントン州が全米最高水準です。たばこ税はニューヨーク州が最も高く、1箱あたりの税額が全米トップです。"}},{"@type":"Question","name":"アメリカのたばこは日本より安いですか？","acceptedAnswer":{"@type":"Answer","text":"州によって大きく異なります。税率が低い南部の州では日本より安い場合もありますが、ニューヨークやカリフォルニアでは日本と同水準か高いこともあります。"}},{"@type":"Question","name":"アメリカのビール税は日本より安いですか？","acceptedAnswer":{"@type":"Answer","text":"多くの州で日本より安くなります。2026年10月に日本のビール系飲料の酒税は350ml換算54.25円に一本化されますが、アメリカで最もビール税が高いテネシー州でも12オンス（約354ml）あたり十数円相当（1ガロン1.287ドル換算）にとどまり、日本の税額の方が高い計算になります。"}}]
 }
 </script>
 </head>
@@ -347,13 +348,53 @@ footer span{color:var(--gold)}
 
 </main>
 
+<div class="container" style="max-width:1100px;margin:0 auto;padding:0 5% 50px">
+<div class="section"><div class="info-grid">
+<div class="info-card"><div class="num">$36.68</div><div class="label">スピリッツ税 最高：ワシントン州</div><div class="desc">1ガロンあたり。全米平均の6倍以上</div></div>
+<div class="info-card"><div class="num">$0</div><div class="label">スピリッツ税 実質ゼロ：ワイオミング・NH州</div><div class="desc">政府が酒販を独占する「コントロール州」</div></div>
+<div class="info-card"><div class="num">54.25円</div><div class="label">日本のビール税（2026年10月〜・350ml）</div><div class="desc">ビール・発泡酒・新ジャンルが一本化</div></div>
+<div class="info-card"><div class="num">$1.287</div><div class="label">ビール税 全米最高：テネシー州</div><div class="desc">1ガロンあたり。12オンス換算でも日本より低い</div></div>
+</div></div>
+
+<div class="section"><h2>日本の酒税との比較：実はアメリカより高い？</h2>
+<h3>1. ビールは日本の方が高税率</h3>
+<p>2026年10月、日本のビール系飲料の酒税はビール・発泡酒・新ジャンルが<strong>350mlあたり54.25円に一本化</strong>されます。一方アメリカで最もビール税が高いテネシー州でも1ガロン（3.8L）あたり1.287ドルで、12オンス缶（約354ml）換算では10円台後半程度（1ドル150円換算）にとどまります。<strong>意外にも「酒税が高いのは日本」というケースがビールでは起きています。</strong></p>
+<h3>2. スピリッツ（蒸留酒）は州によって桁違い</h3>
+<p>ワシントン州は1ガロンあたり36.68ドルという突出した税率で、2位のオレゴン州（23.74ドル）を大きく引き離しています。一方でワイオミング州とニューハンプシャー州は、政府が酒類販売を直接管理する「コントロール州」のため実質税率0ドルです。同じアメリカでも州境を越えるだけで税負担がまったく違います。</p>
+<h3>3. なぜここまで差が出るのか</h3>
+<p>アメリカの酒税は連邦レベルで統一されておらず、各州が独自に税率と課税方式（物品税・売上税上乗せ・政府専売など）を決めています。ワシントン州が突出して高いのは、2011年に酒類販売を州営から民営化した際、税収減を補うために高税率を導入した経緯があるためです。</p></div>
+
+<div class="section"><h2>種類別 州ランキング</h2>
+<p>2026年 Tax Foundationのデータに基づく、各酒類の税率が高い州・低い州です。</p>
+<table class="data-table"><tr><th>種類</th><th>最高税率の州</th><th>税率</th></tr>
+<tr><td><strong>スピリッツ</strong></td><td>ワシントン</td><td><span class="tag-high">$36.68/gal</span></td></tr>
+<tr><td><strong>ビール</strong></td><td>テネシー</td><td><span class="tag-high">$1.287/gal</span></td></tr>
+<tr><td><strong>ワイン</strong></td><td>ケンタッキー</td><td><span class="tag-high">$3.82/gal</span></td></tr>
+</table>
+<table class="data-table"><tr><th>種類</th><th>最低税率の州</th><th>税率</th></tr>
+<tr><td><strong>スピリッツ</strong></td><td>ワイオミング・NH（実質ゼロ）</td><td><span class="tag-zero">$0.00/gal</span></td></tr>
+<tr><td><strong>ビール</strong></td><td>ワイオミング</td><td><span class="tag-zero">$0.019/gal</span></td></tr>
+<tr><td><strong>ワイン</strong></td><td>カリフォルニア</td><td><span class="tag-zero">$0.20/gal</span></td></tr>
+</table></div>
+
+<div class="section"><h2>日本人旅行者・赴任者向けの実用情報</h2>
+<div class="alert"><strong>💡 ポイント：</strong>アメリカでは酒税が小売価格に組み込まれており、レシートに税額が別途表示されないことがほとんどです。「意外と高い」「意外と安い」と感じたら、州の酒税水準を思い出してみてください。</div>
+<h3>お酒好きなら州選びも節税になる</h3>
+<p>長期赴任や留学で居住地を選べる場合、スピリッツはミズーリ州（1ガロン2ドル）、ワインはカリフォルニア州が税負担の軽い州です。逆にワシントン州やケンタッキー州は税率が高いため、同じ銘柄でも店頭価格に差が出ます。</p>
+<h3>州境をまたぐ「酒税ショッピング」</h3>
+<p>Tax Foundationの分析では、ワシントン州民の一部が隣接するアイダホ州で酒類の約8%を購入しているとされ、税率差を狙った越境ショッピングも実際に起きています。旅行中に複数州をまたぐ場合は、価格差を意識すると節約になります。</p>
+<p>出典：<a href="https://taxfoundation.org/data/all/state/distilled-spirits-taxes/" target="_blank" rel="noopener" style="color:var(--gold)">Tax Foundation — Distilled Spirits, Beer, and Wine Taxes by State, 2026</a>／<a href="https://www.mof.go.jp/tax_policy/summary/consumption/d08.htm" target="_blank" rel="noopener" style="color:var(--gold)">財務省 酒税に関する資料</a></p></div>
+</div>
+
   <div class="section faq-section">
     <h2>よくある質問</h2>
-    <div class="faq-item"><h3 class="faq-q">アメリカで酒税が一番高い州はどこですか？</h3><p class="faq-a">スピリッツ（蒸留酒）の税率はワシントン州が全米最高水準です。たばこ税はニューヨーク州が最も高く、1箱あたりの税額が全米トップです。</p></div>
+    <div class="faq-item"><h3 class="faq-q">アメリカで酒税が一番高い州はどこですか？</h3><p class="faq-a">スピリッツ（蒸留酒）の税率はワシントン州が全米最高水準（1ガロン36.68ドル）です。たばこ税はニューヨーク州が最も高く、1箱あたりの税額が全米トップです。</p></div>
     <div class="faq-item"><h3 class="faq-q">アメリカのたばこは日本より安いですか？</h3><p class="faq-a">州によって大きく異なります。税率が低い南部の州では日本より安い場合もありますが、ニューヨークやカリフォルニアでは日本と同水準か高いこともあります。</p></div>
+    <div class="faq-item"><h3 class="faq-q">アメリカのビール税は日本より安いですか？</h3><p class="faq-a">多くの州で日本より安くなります。2026年10月に日本のビール系飲料の酒税は350ml換算54.25円に一本化されますが、アメリカで最もビール税が高いテネシー州でも12オンスあたり十数円相当にとどまり、日本の税額の方が高い計算になります。</p></div>
   </div>
 <footer>
   &copy; <span>US SQUARE</span> — アメリカ情報まとめサイト
+<span style="font-size:12px;margin-top:10px;display:inline-block"><a href="privacy.html">プライバシーポリシー</a> ・ <a href="about.html">運営者情報</a> ・ <a href="contact.html">お問い合わせ</a></span>
 </footer>
 
 </body>

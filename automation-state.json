@@ -1,0 +1,59 @@
+{
+  "_comment": "US SQUARE 週次自動運用タスクの状態管理ファイル。Claudeの週次スケジュールタスクが毎回読み書きします。",
+  "last_run_date": null,
+  "freshness_rotation": {
+    "page_order": [
+      "tax.html",
+      "income-tax.html",
+      "minimum-wage.html",
+      "guns.html",
+      "crime.html",
+      "cost-of-living.html",
+      "rent.html",
+      "alcohol.html",
+      "japanese.html",
+      "landmarks.html",
+      "index.html"
+    ],
+    "next_index": 0
+  },
+  "content_pipeline": {
+    "candidate_topics": [
+      {
+        "topic": "医療費・無保険者率",
+        "source_hint": "KFF (Kaiser Family Foundation)",
+        "status": "pending"
+      },
+      {
+        "topic": "肥満率・平均寿命",
+        "source_hint": "CDC",
+        "status": "pending"
+      },
+      {
+        "topic": "気候・竜巻発生数",
+        "source_hint": "NOAA",
+        "status": "pending"
+      },
+      {
+        "topic": "チップ文化・州別相場",
+        "source_hint": "要調査",
+        "status": "pending"
+      },
+      {
+        "topic": "州別大麻合法化状況",
+        "source_hint": "要調査",
+        "status": "pending"
+      },
+      {
+        "topic": "電気代・ガソリン価格",
+        "source_hint": "EIA (U.S. Energy Information Administration)",
+        "status": "pending"
+      }
+    ],
+    "published_log": []
+  },
+  "monitoring": {
+    "last_policy_center_check": null,
+    "last_search_console_check": null
+  }
+}

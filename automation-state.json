@@ -15,12 +15,12 @@
       "landmarks.html",
       "index.html"
     ],
-    "next_index": 3,
+    "next_index": 4,
     "last_checked": {
-      "page": "minimum-wage.html",
+      "page": "guns.html",
       "date": "2026-10-03",
-      "result": "updated",
-      "note": "2026年公式最低賃金レートに更新。WA $17.13、NY $16.00-17.00、CT $16.94、CA $16.90、NJ $15.92、OR $14.55-16.80、CO $15.16、AZ $15.15、ME $15.10、MA $15.00（据え置き）。州公式機関（lni.wa.gov等）およびpayroll準拠サイト複数で照合済み。JSON-LD・FAQ・infoカード・年表記（2025→2026）も合わせて更新。"
+      "result": "no_changes_needed",
+      "note": "CDC NCHS Firearm Mortalityページで2024年が依然として最新の確定（finalized）データであることを確認。ページ記載の全米平均12.8人/10万人、ミシシッピ州28.0人などの数値・州別ランキングは変更なし。2025年分はまだ確定データが未公開のため編集なし。"
     }
   },
   "content_pipeline": {
@@ -43,7 +43,7 @@
       {
         "topic": "チップ文化・州別相場",
         "source_hint": "要調査",
-        "status": "pending"
+        "status": "published"
       },
       {
         "topic": "州別大麻合法化状況",
@@ -74,13 +74,19 @@
         "topic": "気候・竜巻発生数",
         "filename": "tornado.html",
         "url": "https://us.bloomsfun.com/tornado.html"
+      },
+      {
+        "date": "2026-10-03",
+        "topic": "チップ文化・州別相場",
+        "filename": "tipping.html",
+        "url": "https://us.bloomsfun.com/tipping.html"
       }
     ]
   },
   "monitoring": {
     "last_policy_center_check": "2026-10-03",
     "last_search_console_check": "2026-10-03",
-    "search_console_note": "ポリシーセンター: 問題なし。Search Console: インデックス登録済み66ページ／未登録317ページ、過去3ヶ月クリック数101回。未登録ページ数がやや多いため要確認（新規ページのインデックス登録状況は来週以降も注視）。"
+    "search_console_note": "AdSenseポリシーセンター：「現在、問題はありません」。Search Console：手動による対策・セキュリティの問題ともに「問題は検出されませんでした」。データセット（構造化データ）は有効4件・無効0件で、descriptionの文字数不足やlicense欠落などの警告も現状0件。ログインセッションはAdSense・Search Consoleともに有効だった。"
   },
   "incidents": [
     {
@@ -94,6 +100,12 @@
       "issue": "上記インシデントのfixはobesity-life-expectancy.htmlには実際には適用されていなかった（記録上は「全12ページに適用済み」となっていたが、同ページのheader-innerはheight固定のままだった）。今週tornado.htmlへのナビリンク追加でヘッダー崩れリスクが再度生じるタイミングで発覚。",
       "fix": "obesity-life-expectancy.htmlの.header-innerをmin-height+flex-wrap:wrapに、nav aにflex-shrink:0+white-space:nowrapを追加して修正。本番サイトのスクリーンショットで復旧を確認済み。",
       "process_change": "「全ページ適用済み」という記録があっても、ナビ項目を追加する週は対象ページのCSSを個別に確認してから進めることとした。"
+    },
+    {
+      "date": "2026-10-03",
+      "issue": "同じファイルを短時間に2回連続で編集した際（例：minimum-wage.htmlとcost-of-living.htmlのナビ追加→本文内部リンク追加）、2回目の編集でGitHubのWeb UI編集画面がfetch()で取得したraw.githubusercontent.comの内容がCDNキャッシュ（約5分）のため1回目の編集を反映していない古い内容になっており、結果的に1回目の変更（ナビへのtipping.htmlリンク追加）を意図せず上書き・削除してしまった。",
+      "fix": "minimum-wage.html・cost-of-living.htmlの両方でナビゲーションからtipping.htmlリンクが消えていたことをコミット差分の確認で発見し、それぞれ修正コミット（ナビリンクの再追加）を行って復旧済み。",
+      "process_change": "同一ファイルを同じ実行内で複数回編集する場合は、2回目以降の編集前に`{cache:'no-store'}`を付けても解消しないCDNキャッシュの遅延があり得ることを踏まえ、編集ごとにコミット後の差分（diff）を確認してから次の編集に進むか、同一ファイルへの変更はできる限り1回のコミットにまとめるようにする。"
     }
   ]
 }

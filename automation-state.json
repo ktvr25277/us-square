@@ -15,7 +15,13 @@
       "landmarks.html",
       "index.html"
     ],
-    "next_index": 1
+    "next_index": 2,
+    "last_checked": {
+      "page": "income-tax.html",
+      "date": "2026-10-03",
+      "result": "no_changes_needed",
+      "note": "Tax Foundation 2026年版データと照合。CA13.3%/HI11.0%/NJ10.75%/OR9.9%/MN9.85%、所得税ゼロ9州（ワシントン州含む）いずれも最新データと一致。編集なし。"
+    }
   },
   "content_pipeline": {
     "candidate_topics": [
@@ -27,7 +33,7 @@
       {
         "topic": "肥満率・平均寿命",
         "source_hint": "CDC",
-        "status": "pending"
+        "status": "published"
       },
       {
         "topic": "気候・竜巻発生数",
@@ -56,11 +62,18 @@
         "topic": "医療費・無保険者率",
         "filename": "healthcare-cost.html",
         "url": "https://us.bloomsfun.com/healthcare-cost.html"
+      },
+      {
+        "date": "2026-10-03",
+        "topic": "肥満率・平均寿命",
+        "filename": "obesity-life-expectancy.html",
+        "url": "https://us.bloomsfun.com/obesity-life-expectancy.html"
       }
     ]
   },
   "monitoring": {
     "last_policy_center_check": "2026-10-03",
-    "last_search_console_check": "2026-10-03"
+    "last_search_console_check": "2026-10-03",
+    "search_console_note": "ポリシーセンター: 問題なし。Search Console: インデックス登録済み66ページ／未登録317ページ、過去3ヶ月クリック数101回。未登録ページ数がやや多いため要確認（新規ページのインデックス登録状況は来週以降も注視）。"
   }
 }

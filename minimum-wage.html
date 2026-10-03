@@ -13,12 +13,12 @@
 :root{--navy:#0d1b2a;--navy2:#162032;--gold:#c9a84c;--gold-light:#e8c97a;--text:#e8e8e8;--text-muted:#9aa5b4;--border:rgba(201,168,76,0.2)}
 body{font-family:'Hiragino Kaku Gothic Pro','Meiryo',sans-serif;background:var(--navy);color:var(--text);min-height:100vh}
 header{background:var(--navy2);border-bottom:1px solid var(--border);padding:0 5%;position:sticky;top:0;z-index:100}
-.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:70px}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;min-height:70px;flex-wrap:wrap}
 .logo-link{text-decoration:none}
 .logo{font-size:22px;font-weight:900;letter-spacing:.1em;color:#fff}
 .logo span{color:var(--gold)}
-nav{display:flex;gap:0}
-nav a{color:var(--text-muted);text-decoration:none;font-size:13px;padding:0 14px;height:70px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+nav{display:flex;gap:0;flex-wrap:wrap}
+nav a{color:var(--text-muted);text-decoration:none;font-size:13px;padding:0 14px;height:70px;flex-shrink:0;white-space:nowrap;display:flex;align-items:center;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
 nav a:hover,nav a.active{color:var(--gold);border-bottom-color:var(--gold)}
 .hero{background:linear-gradient(135deg,#0d1b2a 0%,#1a2d45 100%);padding:60px 5% 50px;border-bottom:1px solid var(--border)}
 .hero-inner{max-width:1100px;margin:0 auto}

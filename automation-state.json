@@ -15,12 +15,12 @@
       "landmarks.html",
       "index.html"
     ],
-    "next_index": 2,
+    "next_index": 3,
     "last_checked": {
-      "page": "income-tax.html",
+      "page": "minimum-wage.html",
       "date": "2026-10-03",
-      "result": "no_changes_needed",
-      "note": "Tax Foundation 2026年版データと照合。CA13.3%/HI11.0%/NJ10.75%/OR9.9%/MN9.85%、所得税ゼロ9州（ワシントン州含む）いずれも最新データと一致。編集なし。"
+      "result": "updated",
+      "note": "2026年公式最低賃金レートに更新。WA $17.13、NY $16.00-17.00、CT $16.94、CA $16.90、NJ $15.92、OR $14.55-16.80、CO $15.16、AZ $15.15、ME $15.10、MA $15.00（据え置き）。州公式機関（lni.wa.gov等）およびpayroll準拠サイト複数で照合済み。JSON-LD・FAQ・infoカード・年表記（2025→2026）も合わせて更新。"
     }
   },
   "content_pipeline": {
@@ -38,7 +38,7 @@
       {
         "topic": "気候・竜巻発生数",
         "source_hint": "NOAA",
-        "status": "pending"
+        "status": "published"
       },
       {
         "topic": "チップ文化・州別相場",
@@ -68,6 +68,12 @@
         "topic": "肥満率・平均寿命",
         "filename": "obesity-life-expectancy.html",
         "url": "https://us.bloomsfun.com/obesity-life-expectancy.html"
+      },
+      {
+        "date": "2026-10-03",
+        "topic": "気候・竜巻発生数",
+        "filename": "tornado.html",
+        "url": "https://us.bloomsfun.com/tornado.html"
       }
     ]
   },
@@ -82,6 +88,12 @@
       "issue": "全ページ共通のヘッダー/ナビゲーションCSSに、項目数やラベル長が増えるとテキストが折り返してヘッダーが崩れる潜在バグがあった（.header-innerがheight固定・navとnav aにflex-wrap/flex-shrink/white-space指定がなかったため）。今回のobesity-life-expectancy.html公開でナビ項目が12個に増えたことで顕在化し、ユーザーがスクリーンショットで発見・報告。",
       "fix": ".header-innerをmin-height+flex-wrap:wrapに、navにflex-wrap:wrapを、nav aにflex-shrink:0+white-space:nowrapを追加。影響のあった全12ページ（guns, tax, alcohol, japanese, landmarks, healthcare-cost, income-tax, minimum-wage, crime, cost-of-living, rent, index）にコミットし、本番サイトでスクリーンショットにより復旧を確認済み。",
       "process_change": "スケジュールタスクのプロンプトに「ステップA-QA：公開内容の目視チェック（毎週必須）」を追加し、今後HTML/CSSを変更した週は必ずスクリーンショットで複数ページを目視確認してから完了とするようにした。"
+    },
+    {
+      "date": "2026-10-03",
+      "issue": "上記インシデントのfixはobesity-life-expectancy.htmlには実際には適用されていなかった（記録上は「全12ページに適用済み」となっていたが、同ページのheader-innerはheight固定のままだった）。今週tornado.htmlへのナビリンク追加でヘッダー崩れリスクが再度生じるタイミングで発覚。",
+      "fix": "obesity-life-expectancy.htmlの.header-innerをmin-height+flex-wrap:wrapに、nav aにflex-shrink:0+white-space:nowrapを追加して修正。本番サイトのスクリーンショットで復旧を確認済み。",
+      "process_change": "「全ページ適用済み」という記録があっても、ナビ項目を追加する週は対象ページのCSSを個別に確認してから進めることとした。"
     }
   ]
 }

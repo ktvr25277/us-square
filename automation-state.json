@@ -1,6 +1,6 @@
 {
   "_comment": "US SQUARE 週次自動運用タスクの状態管理ファイル。Claudeの週次スケジュールタスクが毎回読み書きします。",
-  "last_run_date": "2026-10-03",
+  "last_run_date": "2026-10-10",
   "freshness_rotation": {
     "page_order": [
       "tax.html",
@@ -15,12 +15,12 @@
       "landmarks.html",
       "index.html"
     ],
-    "next_index": 4,
+    "next_index": 5,
     "last_checked": {
-      "page": "guns.html",
-      "date": "2026-10-03",
-      "result": "no_changes_needed",
-      "note": "CDC NCHS Firearm Mortalityページで2024年が依然として最新の確定（finalized）データであることを確認。ページ記載の全米平均12.8人/10万人、ミシシッピ州28.0人などの数値・州別ランキングは変更なし。2025年分はまだ確定データが未公開のため編集なし。"
+      "page": "crime.html",
+      "date": "2026-10-10",
+      "result": "updated",
+      "note": "2022年FBI統計（暴力犯罪率369件、州別上位/下位10州ランキング等）が古いままだったため、2024年FBI確定データ（全米暴力犯罪率359.1件、財産犯罪率1,760.1件、殺人率5.0件）に更新。州別ランキングもアラスカ・ニューメキシコの順位入れ替わりなど反映。あわせてFBIが2026年8月に公表した2025年速報（暴力犯罪率▲9.3%、殺人率4.1件＝戦後最低水準）を新設の『最新速報』ボックスで紹介。ミシシッピ州はFBI暴力犯罪率では低位だがCDC銃死亡率では全米最高水準という指標間の矛盾に気づき、表内に注記を追加した。"
     }
   },
   "content_pipeline": {
@@ -48,12 +48,19 @@
       {
         "topic": "州別大麻合法化状況",
         "source_hint": "要調査",
-        "status": "pending"
+        "status": "pending",
+        "note": "純粋な統計解説で商業的価値が相対的に低いため今週は見送り。pending継続。"
       },
       {
         "topic": "電気代・ガソリン価格",
         "source_hint": "EIA (U.S. Energy Information Administration)",
-        "status": "pending"
+        "status": "pending",
+        "note": "純粋な統計解説で商業的価値が相対的に低いため今週は見送り。pending継続。"
+      },
+      {
+        "topic": "ESTA申請料金（2026年値上げ）",
+        "source_hint": "Federal Register / CBP esta.cbp.dhs.gov",
+        "status": "published"
       }
     ],
     "published_log": [
@@ -80,13 +87,22 @@
         "topic": "チップ文化・州別相場",
         "filename": "tipping.html",
         "url": "https://us.bloomsfun.com/tipping.html"
+      },
+      {
+        "date": "2026-10-10",
+        "topic": "ESTA申請料金（2026年値上げ）",
+        "filename": "esta.html",
+        "url": "https://us.bloomsfun.com/esta.html",
+        "category": "日本人・観光",
+        "target_query": "ESTA 料金 2026",
+        "reason": "高CPC・高商業意図（渡航前の必須手続き）。2025年9月$21→$40、2026年1月$40.27への2段階値上げという時事性の高いトピックで、純粋な統計解説より優先。"
       }
     ]
   },
   "monitoring": {
-    "last_policy_center_check": "2026-10-03",
-    "last_search_console_check": "2026-10-03",
-    "search_console_note": "AdSenseポリシーセンター：「現在、問題はありません」。Search Console：手動による対策・セキュリティの問題ともに「問題は検出されませんでした」。データセット（構造化データ）は有効4件・無効0件で、descriptionの文字数不足やlicense欠落などの警告も現状0件。ログインセッションはAdSense・Search Consoleともに有効だった。"
+    "last_policy_center_check": "2026-10-10",
+    "last_search_console_check": "2026-10-10",
+    "search_console_note": "AdSenseポリシーセンター：「現在、問題はありません」。Search Console掲載順位・クリック・表示回数は正常に計測中（過去28日：クリック40・表示回数2290・平均CTR1.7%・平均掲載順位11.1）。ログインセッションはAdSense・Search Consoleともに有効だった。"
   },
   "incidents": [
     {
@@ -106,6 +122,86 @@
       "issue": "同じファイルを短時間に2回連続で編集した際（例：minimum-wage.htmlとcost-of-living.htmlのナビ追加→本文内部リンク追加）、2回目の編集でGitHubのWeb UI編集画面がfetch()で取得したraw.githubusercontent.comの内容がCDNキャッシュ（約5分）のため1回目の編集を反映していない古い内容になっており、結果的に1回目の変更（ナビへのtipping.htmlリンク追加）を意図せず上書き・削除してしまった。",
       "fix": "minimum-wage.html・cost-of-living.htmlの両方でナビゲーションからtipping.htmlリンクが消えていたことをコミット差分の確認で発見し、それぞれ修正コミット（ナビリンクの再追加）を行って復旧済み。",
       "process_change": "同一ファイルを同じ実行内で複数回編集する場合は、2回目以降の編集前に`{cache:'no-store'}`を付けても解消しないCDNキャッシュの遅延があり得ることを踏まえ、編集ごとにコミット後の差分（diff）を確認してから次の編集に進むか、同一ファイルへの変更はできる限り1回のコミットにまとめるようにする。"
+    }
+  ],
+  "metrics_history": [
+    {
+      "date": "2026-10-10",
+      "search_console_28d": {
+        "clicks": 40,
+        "impressions": 2290,
+        "ctr": "1.7%",
+        "avg_position": 11.1,
+        "top_pages": [
+          {
+            "url": "japanese.html",
+            "clicks": 11,
+            "impressions": 896
+          },
+          {
+            "url": "alcohol.html",
+            "clicks": 10,
+            "impressions": 209
+          },
+          {
+            "url": "guns.html",
+            "clicks": 6,
+            "impressions": 204
+          },
+          {
+            "url": "tax.html",
+            "clicks": 4,
+            "impressions": 605
+          },
+          {
+            "url": "landmarks.html",
+            "clicks": 3,
+            "impressions": 40
+          },
+          {
+            "url": "crime.html",
+            "clicks": 2,
+            "impressions": 56
+          },
+          {
+            "url": "minimum-wage.html",
+            "clicks": 1,
+            "impressions": 141
+          },
+          {
+            "url": "income-tax.html",
+            "clicks": 0,
+            "impressions": 630,
+            "ctr": "0%",
+            "avg_position": 71.3
+          }
+        ]
+      },
+      "adsense_28d": {
+        "pageviews": 121,
+        "revenue_jpy": 199,
+        "ad_impressions": 140,
+        "ad_clicks": 2,
+        "cpc_jpy": 12,
+        "page_ctr": "1.65%",
+        "note": "AdSenseダッシュボードの「過去28日間と前の28日間の比較」表示では、すべての指標が前期間比で増加（前期間はほぼ0からのスタートと推定）。automation-state.jsonへのmetrics_history記録は今回が初回のため、来週以降は本エントリを基準に前週比較が可能になる。"
+      }
+    }
+  ],
+  "seo_changes": [
+    {
+      "date": "2026-10-10",
+      "file": "tax.html",
+      "old_title": "州別の消費税マップ（2026年1月版） | US SQUARE",
+      "new_title": "アメリカの消費税はいくら？州別の税率一覧と計算方法【2026年版】 | US SQUARE",
+      "reason": "表示回数605・クリック4件（過去28日）。実際の検索クエリ（アメリカ 消費税 計算=79件、アメリカの消費税はいくら=18件など「いくら」「計算」系の疑問形クエリ）に合わせてtitle/meta/H1/導入文を書き換え、計算式の具体例（$100×1.08=$108）とFAQを追加してCTR改善を狙った。"
+    },
+    {
+      "date": "2026-10-10",
+      "file": "minimum-wage.html",
+      "old_title": "州別の最低賃金マップ（2026年版） | US SQUARE",
+      "new_title": "アメリカの最低賃金はいくら？州別一覧＆日本との比較【2026年版】 | US SQUARE",
+      "reason": "「いくら」「日本との比較」系クエリに合わせてtitle/meta/og/H1を書き換え。"
     }
   ]
 }

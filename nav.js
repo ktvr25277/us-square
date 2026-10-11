@@ -8,7 +8,8 @@
     { label: '税金', items: [
       ['消費税', 'tax.html'],
       ['所得税', 'income-tax.html'],
-      ['酒税・たばこ税', 'alcohol.html']
+      ['酒税・たばこ税', 'alcohol.html'],
+      ['関税スクエア（海外通販の税金）', 'https://import.bloomsfun.com/']
     ]},
     { label: '暮らし', items: [
       ['最低賃金', 'minimum-wage.html'],

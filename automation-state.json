@@ -1,6 +1,6 @@
 {
   "_comment": "US SQUARE 週次自動運用タスクの状態管理ファイル。Claudeの週次スケジュールタスクが毎回読み書きします。",
-  "last_run_date": "2026-10-10",
+  "last_run_date": "2026-10-17",
   "freshness_rotation": {
     "page_order": [
       "tax.html",
@@ -13,14 +13,16 @@
       "alcohol.html",
       "japanese.html",
       "landmarks.html",
-      "index.html"
+      "esta.html",
+      "index.html",
+      "study-abroad.html"
     ],
-    "next_index": 5,
+    "next_index": 6,
     "last_checked": {
-      "page": "crime.html",
-      "date": "2026-10-10",
+      "page": "cost-of-living.html",
+      "date": "2026-10-17",
       "result": "updated",
-      "note": "2022年FBI統計（暴力犯罪率369件、州別上位/下位10州ランキング等）が古いままだったため、2024年FBI確定データ（全米暴力犯罪率359.1件、財産犯罪率1,760.1件、殺人率5.0件）に更新。州別ランキングもアラスカ・ニューメキシコの順位入れ替わりなど反映。あわせてFBIが2026年8月に公表した2025年速報（暴力犯罪率▲9.3%、殺人率4.1件＝戦後最低水準）を新設の『最新速報』ボックスで紹介。ミシシッピ州はFBI暴力犯罪率では低位だがCDC銃死亡率では全米最高水準という指標間の矛盾に気づき、表内に注記を追加した。"
+      "note": "MERIC生活コスト指数を2026年第2四半期版に更新（ハワイ185.8、マサチューセッツ148.1、カリフォルニア140.3、ニューヨーク132.6、アラスカ124.5／安い側はオクラホマ83.0、アラバマ86.0、アイオワ86.1、ウェストバージニア87.0、カンザス87.1）。コネチカットは103.6で上位5州から外れた。ミシシッピは45位(87.4)で最安州ではなくなったため、オクラホマに差し替え。都市別の月額目安・Numbeo比較は未更新。"
     }
   },
   "content_pipeline": {
@@ -61,6 +63,11 @@
         "topic": "ESTA申請料金（2026年値上げ）",
         "source_hint": "Federal Register / CBP esta.cbp.dhs.gov",
         "status": "published"
+      },
+      {
+        "topic": "アメリカ留学の費用（大学の学費・生活費）",
+        "source_hint": "College Board / IIE Open Doors",
+        "status": "published"
       }
     ],
     "published_log": [
@@ -96,13 +103,22 @@
         "category": "日本人・観光",
         "target_query": "ESTA 料金 2026",
         "reason": "高CPC・高商業意図（渡航前の必須手続き）。2025年9月$21→$40、2026年1月$40.27への2段階値上げという時事性の高いトピックで、純粋な統計解説より優先。"
+      },
+      {
+        "date": "2026-10-17",
+        "topic": "アメリカ留学の費用（大学の学費・生活費）",
+        "filename": "study-abroad.html",
+        "url": "https://us.bloomsfun.com/study-abroad.html",
+        "category": "暮らし",
+        "target_query": "アメリカ 留学 費用 / 学費",
+        "reason": "高商業意図（留学エージェント・保険・送金系の広告単価が高い）。College Board 2025-26と IIE Open Doors 2025の一次データに基づく。"
       }
     ]
   },
   "monitoring": {
-    "last_policy_center_check": "2026-10-10",
-    "last_search_console_check": "2026-10-10",
-    "search_console_note": "AdSenseポリシーセンター：「現在、問題はありません」。Search Console掲載順位・クリック・表示回数は正常に計測中（過去28日：クリック40・表示回数2290・平均CTR1.7%・平均掲載順位11.1）。ログインセッションはAdSense・Search Consoleともに有効だった。"
+    "last_policy_center_check": "2026-10-17",
+    "last_search_console_check": "2026-10-17",
+    "search_console_note": "AdSenseポリシーセンター：問題なし。Search Console（過去28日）クリック44・表示2420・CTR1.8%・平均順位12.0。ドメイン全体のインデックス：登録69／未登録595（404や代替ページが主。他サブドメイン含む）。新規 study-abroad.html はインデックス登録リクエスト推奨。"
   },
   "incidents": [
     {
@@ -186,6 +202,71 @@
         "page_ctr": "1.65%",
         "note": "AdSenseダッシュボードの「過去28日間と前の28日間の比較」表示では、すべての指標が前期間比で増加（前期間はほぼ0からのスタートと推定）。automation-state.jsonへのmetrics_history記録は今回が初回のため、来週以降は本エントリを基準に前週比較が可能になる。"
       }
+    },
+    {
+      "date": "2026-10-17",
+      "search_console_28d": {
+        "clicks": 44,
+        "impressions": 2420,
+        "ctr": "1.8%",
+        "avg_position": 12,
+        "top_pages": [
+          {
+            "url": "japanese.html",
+            "clicks": 15,
+            "impressions": 972,
+            "avg_position": 7.4
+          },
+          {
+            "url": "guns.html",
+            "clicks": 10,
+            "impressions": 202
+          },
+          {
+            "url": "alcohol.html",
+            "clicks": 8,
+            "impressions": 209
+          },
+          {
+            "url": "tax.html",
+            "clicks": 5,
+            "impressions": 614
+          },
+          {
+            "url": "crime.html",
+            "clicks": 2,
+            "impressions": 66
+          },
+          {
+            "url": "landmarks.html",
+            "clicks": 2,
+            "impressions": 42
+          },
+          {
+            "url": "minimum-wage.html",
+            "clicks": 1,
+            "impressions": 149
+          },
+          {
+            "url": "income-tax.html",
+            "clicks": 0,
+            "impressions": 99
+          }
+        ]
+      },
+      "adsense_28d_account_all_sites": {
+        "pageviews": 332,
+        "revenue_jpy": 111,
+        "ad_clicks": 2,
+        "cpc_jpy": 18,
+        "page_ctr": "0.60%"
+      },
+      "adsense_30d_us_site": {
+        "pageviews": 192,
+        "revenue_jpy": 35,
+        "clicks": 2
+      },
+      "note": "AdSenseホームの「過去28日」はアカウント全体（us/import/kiseki等）。us.bloomsfun.comのみは過去30日でPV192・収益35円。前回(10/10)記録の121PV/199円とは集計範囲が異なる可能性あり。"
     }
   ],
   "seo_changes": [
@@ -202,6 +283,13 @@
       "old_title": "州別の最低賃金マップ（2026年版） | US SQUARE",
       "new_title": "アメリカの最低賃金はいくら？州別一覧＆日本との比較【2026年版】 | US SQUARE",
       "reason": "「いくら」「日本との比較」系クエリに合わせてtitle/meta/og/H1を書き換え。"
+    },
+    {
+      "date": "2026-10-17",
+      "file": "japanese.html",
+      "old_title": "アメリカ在住の日本人数（州別） | US SQUARE",
+      "new_title": "アメリカに住む日本人は何人？在留邦人41.6万人と州別の日系人口【2025年版】 | US SQUARE",
+      "reason": "表示972回・クリック15・平均順位7.4。検索語「アメリカ 日本人 人口」「在米日本人 人数」「アメリカに住んでる日本人の数」に合わせ、title/meta/og/H1/導入文を書き換え。本文に外務省の在留邦人統計（令和7年10月1日現在 416,380人・長期182,905・永住233,475・LA都市圏63,972）の新セクションを追加（検索語の「人数」に答える情報が欠けていたため）。"
     }
   ]
 }

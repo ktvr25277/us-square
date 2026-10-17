@@ -15,7 +15,8 @@
       ['最低賃金', 'minimum-wage.html'],
       ['生活費', 'cost-of-living.html'],
       ['家賃', 'rent.html'],
-      ['チップ', 'tipping.html']
+      ['チップ', 'tipping.html'],
+      ['アメリカ留学の費用', 'study-abroad.html']
     ]},
     { label: '安全・健康', items: [
       ['治安・犯罪率', 'crime.html'],

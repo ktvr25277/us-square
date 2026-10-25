@@ -28,7 +28,8 @@
     { label: '日本人・観光', items: [
       ['在住日本人数', 'japanese.html'],
       ['国立公園', 'landmarks.html'],
-      ['ESTA申請', 'esta.html']
+      ['ESTA申請', 'esta.html'],
+      ['アメリカ入国の税関ルール', 'customs.html']
     ]}
   ];
 

@@ -1,6 +1,6 @@
 {
   "_comment": "US SQUARE 週次自動運用タスクの状態管理ファイル。Claudeの週次スケジュールタスクが毎回読み書きします。",
-  "last_run_date": "2026-10-17",
+  "last_run_date": "2026-10-24",
   "freshness_rotation": {
     "page_order": [
       "tax.html",
@@ -15,14 +15,15 @@
       "landmarks.html",
       "esta.html",
       "index.html",
-      "study-abroad.html"
+      "study-abroad.html",
+      "customs.html"
     ],
-    "next_index": 6,
+    "next_index": 7,
     "last_checked": {
-      "page": "cost-of-living.html",
-      "date": "2026-10-17",
-      "result": "updated",
-      "note": "MERIC生活コスト指数を2026年第2四半期版に更新（ハワイ185.8、マサチューセッツ148.1、カリフォルニア140.3、ニューヨーク132.6、アラスカ124.5／安い側はオクラホマ83.0、アラバマ86.0、アイオワ86.1、ウェストバージニア87.0、カンザス87.1）。コネチカットは103.6で上位5州から外れた。ミシシッピは45位(87.4)で最安州ではなくなったため、オクラホマに差し替え。都市別の月額目安・Numbeo比較は未更新。"
+      "page": "rent.html",
+      "date": "2026-10-24",
+      "result": "no-change",
+      "note": "Apartment Listの最新全国データを一次確認できず（WebFetch許可待ちで取得不可）。ページは全国平均$1,900/$1,600〜1,900など記載が不統一で2025年版のまま。次回ローテーション時またはテーマ不足時に、Apartment List最新値で数値を整理し直す候補。"
     }
   },
   "content_pipeline": {
@@ -68,6 +69,41 @@
         "topic": "アメリカ留学の費用（大学の学費・生活費）",
         "source_hint": "College Board / IIE Open Doors",
         "status": "published"
+      },
+      {
+        "topic": "アメリカ入国の税関ルール（免税範囲・現金$10,000申告）",
+        "source_hint": "CBP Form 6059B / 日本税関",
+        "status": "published"
+      },
+      {
+        "topic": "アメリカ旅行・出張の海外旅行保険と医療費",
+        "source_hint": "KFF / 国務省",
+        "status": "pending",
+        "note": "2026-10-24追加。高CPC見込み（保険・通信・送金・ビザ・投資）"
+      },
+      {
+        "topic": "アメリカでの携帯・SIM・eSIMの選び方と料金",
+        "source_hint": "FCC/各社公式",
+        "status": "pending",
+        "note": "2026-10-24追加。高CPC見込み（保険・通信・送金・ビザ・投資）"
+      },
+      {
+        "topic": "アメリカ向け海外送金・手数料と為替",
+        "source_hint": "CFPB（送金規則）",
+        "status": "pending",
+        "note": "2026-10-24追加。高CPC見込み（保険・通信・送金・ビザ・投資）"
+      },
+      {
+        "topic": "アメリカの学生ビザ（F-1）・就労ビザの種類と費用",
+        "source_hint": "国務省/USCIS",
+        "status": "pending",
+        "note": "2026-10-24追加。高CPC見込み（保険・通信・送金・ビザ・投資）"
+      },
+      {
+        "topic": "米国株の配当・譲渡益にかかる税金（日本居住者）",
+        "source_hint": "IRS/国税庁",
+        "status": "pending",
+        "note": "2026-10-24追加。高CPC見込み（保険・通信・送金・ビザ・投資）"
       }
     ],
     "published_log": [
@@ -112,13 +148,22 @@
         "category": "暮らし",
         "target_query": "アメリカ 留学 費用 / 学費",
         "reason": "高商業意図（留学エージェント・保険・送金系の広告単価が高い）。College Board 2025-26と IIE Open Doors 2025の一次データに基づく。"
+      },
+      {
+        "date": "2026-10-24",
+        "topic": "アメリカ入国の税関ルール",
+        "filename": "customs.html",
+        "url": "https://us.bloomsfun.com/customs.html",
+        "category": "日本人・観光",
+        "target_query": "アメリカ 税関 持ち込み / アメリカ 入国 免税 範囲 / アメリカ 現金 持ち込み",
+        "reason": "ESTA・留学に続く渡航者向け。旅行・送金・保険系の広告に近い需要。CBP公式申告書と日本税関の一次情報で、日本の免税範囲との比較を入れた。"
       }
     ]
   },
   "monitoring": {
-    "last_policy_center_check": "2026-10-17",
-    "last_search_console_check": "2026-10-17",
-    "search_console_note": "AdSenseポリシーセンター：問題なし。Search Console（過去28日）クリック44・表示2420・CTR1.8%・平均順位12.0。ドメイン全体のインデックス：登録69／未登録595（404や代替ページが主。他サブドメイン含む）。新規 study-abroad.html はインデックス登録リクエスト推奨。"
+    "last_policy_center_check": "2026-10-24",
+    "last_search_console_check": "2026-10-24",
+    "search_console_note": "AdSenseポリシーセンター：問題なし。Search Consoleインデックス：登録66／未登録598（404が124、検出-未登録280、クロール済み-未登録122など。他サブドメイン含む）。新規エラー表示なし。customs.htmlはインデックス登録リクエスト推奨。"
   },
   "incidents": [
     {
@@ -267,6 +312,76 @@
         "clicks": 2
       },
       "note": "AdSenseホームの「過去28日」はアカウント全体（us/import/kiseki等）。us.bloomsfun.comのみは過去30日でPV192・収益35円。前回(10/10)記録の121PV/199円とは集計範囲が異なる可能性あり。"
+    },
+    {
+      "date": "2026-10-24",
+      "search_console_28d": {
+        "clicks": 45,
+        "impressions": 2960,
+        "ctr": "1.5%",
+        "avg_position": 12.2,
+        "top_pages": [
+          {
+            "url": "japanese.html",
+            "clicks": 18,
+            "impressions": 1177
+          },
+          {
+            "url": "guns.html",
+            "clicks": 8,
+            "impressions": 193
+          },
+          {
+            "url": "tax.html",
+            "clicks": 6,
+            "impressions": 692
+          },
+          {
+            "url": "alcohol.html",
+            "clicks": 5,
+            "impressions": 183
+          },
+          {
+            "url": "minimum-wage.html",
+            "clicks": 3,
+            "impressions": 305
+          },
+          {
+            "url": "crime.html",
+            "clicks": 2,
+            "impressions": 67
+          },
+          {
+            "url": "rent.html",
+            "clicks": 1,
+            "impressions": 81
+          },
+          {
+            "url": "landmarks.html",
+            "clicks": 1,
+            "impressions": 32
+          },
+          {
+            "url": "income-tax.html",
+            "clicks": 0,
+            "impressions": 154,
+            "avg_position": 69.7
+          }
+        ]
+      },
+      "adsense_28d_account_all_sites": {
+        "pageviews": 412,
+        "revenue_jpy": 100,
+        "ad_clicks": 3,
+        "cpc_jpy": 14,
+        "page_ctr": "0.73%"
+      },
+      "adsense_30d_us_site": {
+        "pageviews": 255,
+        "revenue_jpy": 39,
+        "clicks": 3
+      },
+      "note": "過去7日間の推定収益は全体で¥4、今月¥40。残高¥2,666。"
     }
   ],
   "seo_changes": [
@@ -290,6 +405,13 @@
       "old_title": "アメリカ在住の日本人数（州別） | US SQUARE",
       "new_title": "アメリカに住む日本人は何人？在留邦人41.6万人と州別の日系人口【2025年版】 | US SQUARE",
       "reason": "表示972回・クリック15・平均順位7.4。検索語「アメリカ 日本人 人口」「在米日本人 人数」「アメリカに住んでる日本人の数」に合わせ、title/meta/og/H1/導入文を書き換え。本文に外務省の在留邦人統計（令和7年10月1日現在 416,380人・長期182,905・永住233,475・LA都市圏63,972）の新セクションを追加（検索語の「人数」に答える情報が欠けていたため）。"
+    },
+    {
+      "date": "2026-10-24",
+      "file": "income-tax.html",
+      "old_title": "州別の所得税率マップ（2025年版） | US SQUARE",
+      "new_title": "アメリカの所得税率は？州別ランキング｜所得税ゼロの9州・最高13.3%【2025年版】 | US SQUARE",
+      "reason": "表示154回・クリック0・平均順位69.7。検索語「アメリカ 所得税率」「州税 ランキング」「所得税 最高税率」に合わせtitle/meta/og/H1/導入文を書き換え。順位が低いため効果は数か月かかる見込み。"
     }
   ]
 }

@@ -29,7 +29,8 @@
       ['在住日本人数', 'japanese.html'],
       ['国立公園', 'landmarks.html'],
       ['ESTA申請', 'esta.html'],
-      ['アメリカ入国の税関ルール', 'customs.html']
+      ['アメリカ入国の税関ルール', 'customs.html'],
+      ['海外旅行保険と医療費', 'travel-insurance.html']
     ]}
   ];
 

@@ -9,6 +9,7 @@
       ['消費税', 'tax.html'],
       ['所得税', 'income-tax.html'],
       ['酒税・たばこ税', 'alcohol.html'],
+['米国株の配当税', 'us-stock-tax.html'],
       ['関税スクエア（海外通販の税金）', 'https://import.bloomsfun.com/']
     ]},
     { label: '暮らし', items: [

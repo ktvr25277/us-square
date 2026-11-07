@@ -1,6 +1,6 @@
 {
   "_comment": "US SQUARE 週次自動運用タスクの状態管理ファイル。Claudeの週次スケジュールタスクが毎回読み書きします。",
-  "last_run_date": "2026-11-01",
+  "last_run_date": "2026-11-07",
   "freshness_rotation": {
     "page_order": [
       "tax.html",
@@ -17,14 +17,15 @@
       "index.html",
       "study-abroad.html",
       "customs.html",
-      "travel-insurance.html"
+      "travel-insurance.html",
+      "us-stock-tax.html"
     ],
-    "next_index": 8,
+    "next_index": 9,
     "last_checked": {
-      "page": "alcohol.html",
-      "date": "2026-11-01",
+      "page": "japanese.html",
+      "date": "2026-11-07",
       "result": "no-change",
-      "note": "本文は地図中心で、更新が必要な具体的数値の記載なし。次回はjapanese.html（在留邦人数は令和7年版に更新済みのため軽く確認）。"
+      "note": "外務省の海外在留邦人数調査統計の最新版は令和7年(2025年)10月1日現在（令和8年2月20日公表）で、ページの内容と一致。次回はlandmarks.html。"
     }
   },
   "content_pipeline": {
@@ -102,8 +103,20 @@
       {
         "topic": "米国株の配当・譲渡益にかかる税金（日本居住者）",
         "source_hint": "IRS/国税庁",
-        "status": "pending",
+        "status": "published",
         "note": "2026-10-24追加。高CPC見込み（保険・通信・送金・ビザ・投資）"
+      },
+      {
+        "topic": "アメリカ旅行のクレジットカード海外事務手数料・チップ決済",
+        "source_hint": "各カード会社公式/CFPB",
+        "status": "pending",
+        "note": "2026-11-07追加。高CPC（クレジットカード）"
+      },
+      {
+        "topic": "アメリカのホテル宿泊税・リゾートフィー",
+        "source_hint": "各州・市の公式/FTC",
+        "status": "pending",
+        "note": "2026-11-07追加。ホテル・旅行系の高CPC"
       }
     ],
     "published_log": [
@@ -166,13 +179,22 @@
         "category": "日本人・観光",
         "target_query": "アメリカ 海外旅行保険 必要 / アメリカ 医療費 旅行 / アメリカ 入院 費用",
         "reason": "保険系は高CPC。外務省「世界の医療事情」（入院1回で数百万円〜1千万円、1日1〜2万ドル）、KFF（救急外来自己負担$646）、協会けんぽ（海外療養費）の一次情報で構成。ESTA・税関・留学記事と内部リンク。"
+      },
+      {
+        "date": "2026-11-07",
+        "topic": "米国株の配当・譲渡益にかかる税金（日本居住者）",
+        "filename": "us-stock-tax.html",
+        "url": "https://us.bloomsfun.com/us-stock-tax.html",
+        "category": "税金",
+        "target_query": "アメリカ株 配当 税金 / 米国株 配当金 手取り / W-8BEN / 外国税額控除",
+        "reason": "証券口座・投資系は高CPC。配当$100(15,000円)の手取り計算例、W-8BEN、外国税額控除、NISAでの扱いを三菱UFJ eスマート証券・IRS・国税庁の一次情報で構成。投資推奨ではなく制度解説に限定。"
       }
     ]
   },
   "monitoring": {
-    "last_policy_center_check": "2026-11-01",
-    "last_search_console_check": "2026-11-01",
-    "search_console_note": "AdSenseポリシーセンター：問題なし。Search Consoleインデックス：登録65／未登録602（404が126、検出-未登録282、クロール済み-未登録122など。他サブドメイン含む）。新規エラー表示なし。travel-insurance.htmlはインデックス登録リクエスト推奨。"
+    "last_policy_center_check": "2026-11-07",
+    "last_search_console_check": "2026-11-07",
+    "search_console_note": "AdSenseポリシーセンター：問題なし。Search Consoleインデックス：登録65／未登録602（内訳は前回と同じ。404が126、検出-未登録282、クロール済み-未登録122）。us-stock-tax.htmlとtravel-insurance.htmlはインデックス登録リクエスト推奨。"
   },
   "incidents": [
     {
@@ -465,6 +487,75 @@
         "clicks": 1
       },
       "note": "過去7日間の推定収益は全体で¥30、今月¥1、残高¥2,666。クエリ上位：アメリカ 消費税(表示49)、アメリカ 最低賃金 日本円(40+33)、アメリカの消費税はいくら(37)。"
+    },
+    {
+      "date": "2026-11-07",
+      "search_console_28d": {
+        "clicks": 50,
+        "impressions": 3710,
+        "ctr": "1.3%",
+        "avg_position": 11.2,
+        "top_pages": [
+          {
+            "url": "japanese.html",
+            "clicks": 13,
+            "impressions": 1153
+          },
+          {
+            "url": "tax.html",
+            "clicks": 8,
+            "impressions": 855
+          },
+          {
+            "url": "guns.html",
+            "clicks": 8,
+            "impressions": 172
+          },
+          {
+            "url": "minimum-wage.html",
+            "clicks": 5,
+            "impressions": 567
+          },
+          {
+            "url": "alcohol.html",
+            "clicks": 4,
+            "impressions": 139
+          },
+          {
+            "url": "customs.html",
+            "clicks": 4,
+            "impressions": 88
+          },
+          {
+            "url": "crime.html",
+            "clicks": 3,
+            "impressions": 72
+          },
+          {
+            "url": "rent.html",
+            "clicks": 2,
+            "impressions": 229
+          },
+          {
+            "url": "cost-of-living.html",
+            "clicks": 2,
+            "impressions": 125
+          }
+        ]
+      },
+      "adsense_28d_account_all_sites": {
+        "pageviews": 506,
+        "revenue_jpy": 104,
+        "ad_clicks": 1,
+        "cpc_jpy": 52,
+        "page_ctr": "0.20%"
+      },
+      "adsense_30d_us_site": {
+        "pageviews": 293,
+        "revenue_jpy": 60,
+        "clicks": 1
+      },
+      "note": "過去7日間の推定収益は全体で¥6、今月¥6、残高¥2,734。クエリ上位：アメリカ 最低賃金 日本円(63+51)、アメリカの消費税はいくら(51)、アメリカ 家賃 相場(48)。customs.htmlが4クリックに増加。"
     }
   ],
   "seo_changes": [
@@ -502,6 +593,13 @@
       "old_title": "アメリカの最低賃金はいくら？州別一覧＆日本との比較【2026年版】 | US SQUARE",
       "new_title": "アメリカの最低賃金は日本円でいくら？州別の時給一覧と日本との比較【2026年版】 | US SQUARE",
       "reason": "表示404・クリック5。検索語「アメリカ 最低賃金 日本円」「日本 円」（表示計73・クリック0）に答える円換算表（1ドル150円）を追加し、title/meta/og/H1/FAQを調整。日本の最低賃金を2024年度1,054円から2025年度の全国加重平均1,121円に更新。"
+    },
+    {
+      "date": "2026-11-07",
+      "file": "rent.html",
+      "old_title": "州別の家賃相場マップ（2025年版） | US SQUARE",
+      "new_title": "アメリカの家賃相場は日本円でいくら？州別・都市別の平均家賃【2025年版】 | US SQUARE",
+      "reason": "表示229回・クリック2・平均順位9.1。検索語「アメリカ 家賃 相場」(48)・「アメリカ家賃相場」(15)・「アメリカ 家賃 平均 日本 円」(12)に合わせ、title/meta/og/H1/導入文を書き換え。日本円換算の問いに答えるFAQ（見える形で4問）を追加。"
     }
   ]
 }

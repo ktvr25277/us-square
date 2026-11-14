@@ -1,6 +1,6 @@
 {
   "_comment": "US SQUARE 週次自動運用タスクの状態管理ファイル。Claudeの週次スケジュールタスクが毎回読み書きします。",
-  "last_run_date": "2026-11-07",
+  "last_run_date": "2026-11-14",
   "freshness_rotation": {
     "page_order": [
       "tax.html",
@@ -18,14 +18,15 @@
       "study-abroad.html",
       "customs.html",
       "travel-insurance.html",
-      "us-stock-tax.html"
+      "us-stock-tax.html",
+      "hotel-tax.html"
     ],
-    "next_index": 9,
+    "next_index": 10,
     "last_checked": {
-      "page": "japanese.html",
-      "date": "2026-11-07",
+      "page": "landmarks.html",
+      "date": "2026-11-14",
       "result": "no-change",
-      "note": "外務省の海外在留邦人数調査統計の最新版は令和7年(2025年)10月1日現在（令和8年2月20日公表）で、ページの内容と一致。次回はlandmarks.html。"
+      "note": "国立公園は63（NPS、2026年時点の各種まとめでも63）でページ記載と一致。次回はesta.html。"
     }
   },
   "content_pipeline": {
@@ -115,8 +116,20 @@
       {
         "topic": "アメリカのホテル宿泊税・リゾートフィー",
         "source_hint": "各州・市の公式/FTC",
-        "status": "pending",
+        "status": "published",
         "note": "2026-11-07追加。ホテル・旅行系の高CPC"
+      },
+      {
+        "topic": "アメリカのレンタカー料金・保険・税金（日本人旅行者向け）",
+        "source_hint": "各社公式/州の税・手数料/FTC",
+        "status": "pending",
+        "note": "2026-11-14追加。旅行系の高CPC（レンタカー・保険）"
+      },
+      {
+        "topic": "ハワイ旅行・ラスベガス旅行の総費用と税金・手数料",
+        "source_hint": "ハワイ州観光局/州税務局/Las Vegas CVA",
+        "status": "pending",
+        "note": "2026-11-14追加。旅行・ホテル系の高CPC。hotel-tax.htmlと内部リンク"
       }
     ],
     "published_log": [
@@ -188,13 +201,22 @@
         "category": "税金",
         "target_query": "アメリカ株 配当 税金 / 米国株 配当金 手取り / W-8BEN / 外国税額控除",
         "reason": "証券口座・投資系は高CPC。配当$100(15,000円)の手取り計算例、W-8BEN、外国税額控除、NISAでの扱いを三菱UFJ eスマート証券・IRS・国税庁の一次情報で構成。投資推奨ではなく制度解説に限定。"
+      },
+      {
+        "date": "2026-11-14",
+        "topic": "アメリカのホテル宿泊税・リゾートフィー",
+        "filename": "hotel-tax.html",
+        "url": "https://us.bloomsfun.com/hotel-tax.html",
+        "category": "日本人・観光",
+        "target_query": "アメリカ ホテル 税金 / アメリカ ホテル リゾートフィー / アメリカ 宿泊税",
+        "reason": "ホテル・旅行系は高CPC。tax.htmlの消費税系クエリ（表示計約1,000）から自然に誘導できる。NYC財務局の公式案内（合計14.75%＋$1.50）とFTC総額表示規則（16 CFR Part 464、2025-05-12施行）の一次情報で構成。ラスベガス・ハワイの税率は民間資料（RoomMaster 2026）で補足したため、次回以降に公式サイトで再確認推奨。"
       }
     ]
   },
   "monitoring": {
-    "last_policy_center_check": "2026-11-07",
-    "last_search_console_check": "2026-11-07",
-    "search_console_note": "AdSenseポリシーセンター：問題なし。Search Consoleインデックス：登録65／未登録602（内訳は前回と同じ。404が126、検出-未登録282、クロール済み-未登録122）。us-stock-tax.htmlとtravel-insurance.htmlはインデックス登録リクエスト推奨。"
+    "last_policy_center_check": "2026-11-14",
+    "last_search_console_check": "2026-11-14",
+    "search_console_note": "AdSenseポリシーセンター：問題なし。Search Consoleインデックス：登録58／未登録607（404が136、代替ページ49、リダイレクト5、重複2、検出-未登録281、クロール済み-未登録134）。登録数は前回65→58に減少、要注視。hotel-tax.html・us-stock-tax.html・travel-insurance.htmlはインデックス登録リクエスト推奨。"
   },
   "incidents": [
     {
@@ -556,6 +578,74 @@
         "clicks": 1
       },
       "note": "過去7日間の推定収益は全体で¥6、今月¥6、残高¥2,734。クエリ上位：アメリカ 最低賃金 日本円(63+51)、アメリカの消費税はいくら(51)、アメリカ 家賃 相場(48)。customs.htmlが4クリックに増加。"
+    },
+    {
+      "date": "2026-11-14",
+      "search_console_28d": {
+        "clicks": 42,
+        "impressions": 4080,
+        "ctr": "1.0%",
+        "avg_position": 10.1,
+        "top_pages": [
+          {
+            "url": "tax.html",
+            "clicks": 10,
+            "impressions": 991
+          },
+          {
+            "url": "japanese.html",
+            "clicks": 8,
+            "impressions": 1014
+          },
+          {
+            "url": "minimum-wage.html",
+            "clicks": 5,
+            "impressions": 692
+          },
+          {
+            "url": "rent.html",
+            "clicks": 4,
+            "impressions": 386
+          },
+          {
+            "url": "customs.html",
+            "clicks": 4,
+            "impressions": 112
+          },
+          {
+            "url": "cost-of-living.html",
+            "clicks": 3,
+            "impressions": 177
+          },
+          {
+            "url": "guns.html",
+            "clicks": 3,
+            "impressions": 161
+          },
+          {
+            "url": "alcohol.html",
+            "clicks": 3,
+            "impressions": 119
+          },
+          {
+            "url": "crime.html",
+            "clicks": 2,
+            "impressions": 81
+          }
+        ]
+      },
+      "adsense_28d_account_all_sites": {
+        "pageviews": 389,
+        "ad_clicks": 1,
+        "cpc_jpy": 44,
+        "page_ctr": "0.26%"
+      },
+      "adsense_30d_us_site": {
+        "pageviews": 290,
+        "revenue_jpy": 43,
+        "clicks": 1
+      },
+      "note": "過去7日間の推定収益は全体で¥4、今月¥10、残高¥2,734。クエリ上位：アメリカ 最低賃金 日本円(88+88、クリック0)、アメリカの消費税はいくら(60)、アメリカ 家賃 相場(65)、アメリカ消費税いくら(33)。クリックは前回50→42、表示は3,710→4,080。"
     }
   ],
   "seo_changes": [
@@ -600,6 +690,13 @@
       "old_title": "州別の家賃相場マップ（2025年版） | US SQUARE",
       "new_title": "アメリカの家賃相場は日本円でいくら？州別・都市別の平均家賃【2025年版】 | US SQUARE",
       "reason": "表示229回・クリック2・平均順位9.1。検索語「アメリカ 家賃 相場」(48)・「アメリカ家賃相場」(15)・「アメリカ 家賃 平均 日本 円」(12)に合わせ、title/meta/og/H1/導入文を書き換え。日本円換算の問いに答えるFAQ（見える形で4問）を追加。"
+    },
+    {
+      "date": "2026-11-14",
+      "file": "tax.html",
+      "old_title": "アメリカの消費税はいくら？州別の税率一覧と計算方法【2026年版】 | US SQUARE",
+      "new_title": "アメリカの消費税はいくら・何％？全50州の税率一覧と計算方法【2026年版】 | US SQUARE",
+      "reason": "表示約1,000回・CTR約1%・平均順位約15.7。検索語「アメリカの消費税はいくら」(60)・「アメリカ消費税いくら」(33)・「何パーセント」(20+20)に合わせtitle/meta/og/H1を調整。FAQに「何パーセント」「ワシントン州」「ホテル代にも消費税」を追加し、カリフォルニア州の誤記（州税8.99%→州税7.25%・合算平均8.99%）を修正。hotel-tax.htmlへの内部リンクも追加。"
     }
   ]
 }
